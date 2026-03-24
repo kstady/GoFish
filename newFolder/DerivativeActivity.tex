@@ -1,0 +1,104 @@
+\documentclass{ximera}
+
+
+
+
+\title{A Basic Review of Derivatives}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+\begin{abstract}
+    A basic review of derivatives for students who have practiced finding derivatives using the limit definition, basic differentiation rules, product rule, quotient rule
+    and chain rule.
+\end{abstract}
+\maketitle
+\label{xim:DerivativeActivity}
+
+
+
+\section*{The Limit Definition of the Derivative}
+
+Recall that the slope of a curve at a point is equal to the slope of the tangent line at that point.  The figure below shows the graph
+of a function $f(x)$ and its tangent line at point $P (x, f(x)).$  To find the slope of the tangent line at $P$ algebraically, we would need to know two points that
+lie on the line.  The tangent line and curve have one point in common, but we don't know of any other points that lie on the tangent line.
+So, instead of finding the exact slope we will approximate it using the slope of a secant line.  Recall that a \textbf{secant line} is a line that passes
+through two points on a curve.
+
+The slope of $f$ at point $P(x, f(x))$ can be approximated by drawing a secant line through $P$ and
+a nearby point $Q(x+\Delta x, f(x+\Delta x)).$  If $\Delta x$ is a small number,
+then the slope of the secant line will provide a decent approximation to the slope of the
+tangent line.
+\[ m_{\tan} \approx m_{\sec} \]
+
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis line style = {thick},
+    axis lines = middle,
+    xmin = -1.0, xmax = 3.5,
+    ymin = -2.0, ymax = 15,
+    % Use \strut to align the baselines of the labels perfectly
+    xtick = {1.2, 2.2},
+    xticklabels = {\strut $x$, \strut $x + \Delta x$},
+    ytick = {3.32, 9.02},
+    yticklabels = {$f(x)$, $f(x + \Delta x)$},
+    xlabel = {$x$}, ylabel = {$y$},
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
+    every axis y label/.style={at={(current axis.above origin)}, anchor=south},
+    samples = 100,
+    clip = false
+]
+    % 1. The Curve
+    \addplot [black, very thick, domain=-0.8:2.7] {exp(x)};
+
+    % 2. Tangent Line: Blue
+    \addplot [glaucous!90!black, thick, domain=-0.2:3.2] {3.3201*x - 0.6640}
+        node[pos=1, right, yshift=5pt, xshift=-4.3pt] {\small \textbf{Tangent}};
+
+    % 3. Secant Line: Orange
+    \addplot [orange!80!black, dashed, thick, domain=0.5:3.05] {5.70*x - 3.52}
+        node[pos=1, right, yshift=5.3pt, xshift=-1.2pt] {\small \textbf{Secant}};
+
+    % 4. Points P and Q
+    \addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1.2, 3.32) (2.2, 9.02)};
+    \node[anchor=south, yshift=3pt] at (1.2, 3.32) {$P$};
+    \node[anchor=south, yshift=3pt] at (2.15, 9.02) {$Q$};
+
+    % 5. Dotted lines to axes
+    \draw [gray, thick, dotted] (1.2, 0) -- (1.2, 3.32) -- (0, 3.32);
+    \draw [gray, thick, dotted] (2.2, 0) -- (2.2, 9.02) -- (0, 9.02);
+
+\end{axis}
+\end{tikzpicture}
+
+% Alt Text
+\xmalt{A graph shows a black exponential curve rising from left to right. Two points are marked on the curve: point P at $x$ and
+point Q further to the right at $x + \Delta x.$ A solid blue line labeled "Tangent" touches the curve exactly at point P. A dashed
+orange line labeled "Secant" passes through both points P and Q. Gray dotted lines drop from both points to the $x$ and $y$ axes to
+mark their coordinates as $x, x + \Delta x, f(x)$ and $f(x + \Delta x).$}
+\end{center}
+
+Notice that as $\Delta x \rightarrow 0,$ point $Q$ will get closer to point $P,$ and the secant line will start to look more like
+the tangent line.  Therefore, the slope of the tangent line is the limit of the slope of the secant line.
+\[ m_{\sec} = \frac{f(x+\Delta x) - f(x)}{\Delta x}  \hspace{0.3in}  \textbf{Slope of the Secant Line} \]
+
+\[ m_{\tan} = \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x} \hspace{0.2in}  \textbf{Slope of the Tangent Line} \]
+
+
+Below is an interactive Desmos graph.  Click and drag point $Q$ toward point $P$ to see what happens when $\Delta x \rightarrow 0.$
+If the left sidebar is showing the math, click $\mathbf{\ll}$ to hide the contents.
+
+
+\begin{center}
+\desmos{zsdgpux7ia}{800}{600}              % \desmos{ID}{width}{height}  dimensions are in pixels
+
+\xmalt{An interactive Desmos graph shows the function $f(x) = e^x.$ A fixed point $P$ is marked near $x = 1,$ and a movable point $Q$ is
+positioned to its right at $x + \Delta x.$ There is a solid blue tangent line at $P$ and a dashed orange secant line passing through both $P$
+and $Q.$ As the user drags point $Q$ toward $P,$ $\Delta x \rightarrow 0$ and the orange secant line becomes the blue tangent line.}
+
+\end{center}
+
+\end{document}
+
