@@ -212,10 +212,9 @@ $f'(x) = \answer{2x - 5}$
 
 ~ \\[2em]
 
-{\setlength{\arraycolsep}{15pt} % Adjust 15pt higher or lower for more/less space
+{\setlength{\arraycolsep}{25pt} % Adjust 15pt higher or lower for more/less space
 $
 \begin{array}{lllll}
-\hline
 % \rule{0pt}{height} forces the row to be taller
 \rule{0pt}{6ex} \textbf{First Derivative} & f'(x) & \displaystyle \frac{dy}{dx} & y' & \displaystyle \frac{d}{dx} [f(x)] \\
 
@@ -236,53 +235,38 @@ $}
 \begin{center}
 \begin{tabular}{ll}
 \textbf{Rule} & \textbf{Formula} \\ \hline
-
-\rule{0pt}{4ex} \textbf{Constant Rule} & $\frac{d}{dx} [c] = 0$ \\
-
-\rule{0pt}{4ex} \textbf{Constant Multiple Rule} & $\frac{d}{dx}[cf(x)] = c f'(x)$ \\
-
-\rule{0pt}{4ex} \textbf{Sum and Difference Rule} & $\frac{d}{dx}[f(x) \pm g(x)]  = f'(x) + g'(x) $\\
-
-\rule{0pt}{4ex} \textbf{Power Rule} & $\frac{d}{dx}[x^n] = nx^{n-1}$ \\
-
-\rule{0pt}{4ex} \textbf{Product Rule} & $\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)$ \\
-
-% The Quotient Rule needs more space (6ex) because of the tall fraction
-\rule{0pt}{8ex} \textbf{Quotient Rule} & $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
-
-\rule{0pt}{6ex} \textbf{Chain Rule} & $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$ \\
-
-\rule{0pt}{6ex} \textbf{General Power Rule} & $\frac{d}{dx}[u(x)]^n = n[u(x)]^{n-1} \cdot u'(x)$ \\
-\end{tabular}
-\end{center}
-\end{mybox}
-
-
-
-\begin{mybox}[]
-\begin{center}
-\begin{tabular}{ll}
-\textbf{Rule} & \textbf{Formula} \\ \hline
-&  \\
+% Row 1
 \textbf{Constant Rule} & $\frac{d}{dx} [c] = 0$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{15pt}} \\ % This forces 15 points of vertical space
+
+% Row 2
 \textbf{Constant Multiple Rule} & $\frac{d}{dx}[cf(x)] = c f'(x)$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{15pt}} \\
+
+% Row 3
 \textbf{Sum and Difference Rule} & $\frac{d}{dx}[f(x) \pm g(x)]  = f'(x) + g'(x) $\\
-&  \\
+\multicolumn{2}{l}{\vspace{15pt}} \\
+
+% Row 4
 \textbf{Power Rule} & $\frac{d}{dx}[x^n] = nx^{n-1}$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{15pt}} \\
+
+% Row 5
 \textbf{Product Rule} & $\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{25pt}} \\ % Extra space for the Quotient Rule fraction
+
+% Row 6
 \textbf{Quotient Rule} & $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{25pt}} \\
+
+% Row 7
 \textbf{Chain Rule} & $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$ \\
-&  \\
+\multicolumn{2}{l}{\vspace{15pt}} \\
+
+% Row 8
 \textbf{General Power Rule} & $\frac{d}{dx}[u(x)]^n = n[u(x)]^{n-1} \cdot u'(x)$ \\
-&  \\
 \end{tabular}
 \end{center}
-
 \end{mybox}
 
 
