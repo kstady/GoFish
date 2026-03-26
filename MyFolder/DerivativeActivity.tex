@@ -19,17 +19,12 @@
 
 \section*{The Limit Definition of the Derivative}
 
-Recall that the slope of a curve at a point is equal to the slope of the tangent line at that point.  The figure below shows the graph
-of a function $f(x)$ and its tangent line at point $P (x, f(x)).$  To find the slope of the tangent line at $P$ algebraically, we would need to know two points that
-lie on the line.  The tangent line and curve have one point in common, but we don't know of any other points that lie on the tangent line.
-So, instead of finding the exact slope we will approximate it using the slope of a secant line.  Recall that a \textbf{secant line} is a line that passes
-through two points on a curve.
 
-The slope of $f$ at point $P(x, f(x))$ can be approximated by drawing a secant line through $P$ and
-a nearby point $Q(x+\Delta x, f(x+\Delta x)).$  If $\Delta x$ is a small number,
-then the slope of the secant line will provide a decent approximation to the slope of the
-tangent line.
-\[ m_{\tan} \approx m_{\sec} \]
+Recall that \textbf{the slope of a curve at a point is equal to the slope of the tangent line at that point}.  The figure below shows the graph
+of a function $f(x)$ and its tangent line at point $P (x, f(x)).$  To find the slope of the tangent line at $P$ using the slope formula, we need to 
+know two points that lie on the line.  The tangent line and $f$ have point $P$ common, but we do not have enough information to determine the 
+coordinates of a second point.  So, instead of finding the exact slope, let's approximate it using the slope of a secant line.  A \textbf{secant line} 
+is a line that passes through two points on a curve.
 
 
 \begin{center}
@@ -80,25 +75,228 @@ orange line labeled "Secant" passes through both points P and Q. Gray dotted lin
 mark their coordinates as $x, x + \Delta x, f(x)$ and $f(x + \Delta x).$}
 \end{center}
 
+
+The secant line in the graph above passes through the point $P$ and a nearby point $Q(x+\Delta x, f(x+\Delta x)).$  If $\Delta x$ is a very small number,
+then the slope of the secant line will provide a good approximation to the slope of the tangent line.  The \textbf{slope of the secant line} is the 
+\textbf{average rate of change} of $f$ on $[x, x+ \Delta x]$ and is given below.
+
+
+\[ m_{\sec} = \frac{f(x+\Delta x) - f(x)}{\Delta x}     \]
+
+
 Notice that as $\Delta x \rightarrow 0,$ point $Q$ will get closer to point $P,$ and the secant line will start to look more like
-the tangent line.  Therefore, the slope of the tangent line is the limit of the slope of the secant line.
-\[ m_{\sec} = \frac{f(x+\Delta x) - f(x)}{\Delta x}  \hspace{0.3in}  \textbf{Slope of the Secant Line} \]
-
-\[ m_{\tan} = \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x} \hspace{0.2in}  \textbf{Slope of the Tangent Line} \]
-
-
-Below is an interactive Desmos graph.  Click and drag point $Q$ toward point $P$ to see what happens when $\Delta x \rightarrow 0.$
-If the left sidebar is showing the math, click $\mathbf{\ll}$ to hide the contents.
+the tangent line.  To see this, use the interactive Desmos graph below.  Click and drag point $Q$ toward point $P$ to see that the secant
+line approaches the tangent line as $\Delta x \rightarrow 0.$ If the left sidebar is showing the math, click $\mathbf{\ll}$ to hide the contents.
 
 
 \begin{center}
 \desmos{zsdgpux7ia}{800}{600}              % \desmos{ID}{width}{height}  dimensions are in pixels
 
-\xmalt{An interactive Desmos graph shows the function $f(x) = e^x.$ A fixed point $P$ is marked in quadrant I and a movable point $Q$ is
-positioned to its right at $x + \Delta x.$ There is a solid blue tangent line at $P$ and a dashed orange secant line passing through both $P$
-and $Q.$ As the user drags point $Q$ toward $P,$ $\Delta x \rightarrow 0$ and the orange secant line approaches the blue tangent line.}
+%\xmalt{An interactive Desmos graph shows the function $f(x) = e^x.$ A fixed point $P$ is marked in quadrant I and a movable point $Q$ is
+%positioned to its right. There is a solid blue tangent line at $P$ and a dashed orange secant line passing through both $P$
+%and $Q.$ As the user drags point $Q$ toward $P,$ $\Delta x \rightarrow 0$ and the orange secant line approaches the blue tangent line.}
 
 \end{center}
+
+Since the secant line approaches the tangent line as $\Delta x \rightarrow 0,$ we can find the \emph{exact} slope of the tangent line by taking the limit
+of the slope of the secant line.
+
+\[ m_{\tan} = \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}  \]
+
+The \textbf{slope of the tangent line} is the \textbf{instantaneous rate of change} of $f$ at $P$ and is denoted by $f'(x).$
+
+\[ f'(x) = \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}  \]
+
+The limit $f'(x)$ is called the \textbf{derivative} of $f$ and gives the \emph{exact} slope of the curve $f$ at any point $x.$
+
+\begin{theorem}[\textbf{Limit Definition
+of the Derivative of a Function}]
+
+\vspace{0.1in} The \textbf{derivative} of a function $f(x)$ is
+
+\[ f'(x) = \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x} \]
+
+provided that the limit exists.
+\end{theorem}
+
+\begin{problem}
+Which of the following statements are \textbf{true} regarding instantaneous and average rates of change?
+
+\begin{selectAll}
+    \choice[correct]{The average rate of change on $[x, x+\Delta x]$ is represented by the slope of the secant line.}
+    \choice{The average rate of change is equivalent to $f'(x)$.}
+    \choice[correct]{The instantaneous rate of change at $x$ is represented by the slope of the tangent line.}
+    \choice[correct]{As $\Delta x \to 0$, the average rate of change approaches the instantaneous rate of change.}
+    \choice{The instantaneous rate of change is calculated using any two points on the curve.}
+\end{selectAll}
+
+\begin{feedback}
+    Excellent! Remember:
+    \begin{itemize}
+        \item \textbf{Average} = Secant = Interval $[x, x+\Delta x]$
+        \item \textbf{Instantaneous} = Tangent = Single point $x$
+    \end{itemize}
+\end{feedback}
+\end{problem}
+
+
+\begin{problem}
+A student is asked to find $f'(x)$ for the function $f(x) = x^2 - 5x$ using the limit definition.  Their work is shown below:
+
+\begin{eqnarray*}
+    f'(x) &=& \lim_{\Delta x \rightarrow 0} \frac{f(x+\Delta x) - f(x)}{\Delta x} \quad \textbf{Step 1}  \\
+    & & \\
+    &=& \lim_{\Delta x \rightarrow 0} \frac{(x+\Delta x)^2 - 5(x+\Delta x) - (x^2 - 5x)}{\Delta x} \quad \textbf{Step 2} \\
+    & & \\
+    &=& \lim_{\Delta x \rightarrow 0} \frac{x^2 + 2x\Delta x + (\Delta x)^2 - 5x - 5\Delta x - x^2 - 5x}{\Delta x} \quad \textbf{Step 3} \\
+    & & \\
+    &=& \lim_{\Delta x \rightarrow 0} \frac{2x \Delta x + (\Delta x)^2 - 5 \Delta x}{\Delta x} \quad \textbf{Step 4} \\
+    & & \\
+    &=& \lim_{\Delta x \rightarrow 0} 2x + \Delta x - 5 \quad \textbf{Step 5} \\
+    & & \\
+    &=& 2x - 5 \quad \textbf{Step 6} \\
+\end{eqnarray*}
+
+In which step did the student make their first error, if any?
+\begin{multipleChoice}
+    \choice{Step 1}
+    \choice{Step 2}
+    \choice[correct]{Step 3}
+    \choice{Step 4}
+    \choice{Step 5}
+    \choice{Step 6}
+    \choice{There is no error.}
+\end{multipleChoice}
+
+\begin{problem}
+What was the error?
+
+    \begin{multipleChoice}
+    \choice{The student didn't expand $(x+\Delta x)^2$ correctly.}
+    \choice[correct]{The student didn't properly distribute the negative in front of $(x^2-5x).$ }
+    \choice{The student didn't properly distribute the negative $5$ in front of $(x+\Delta x).$}
+    \choice{There is no error.}
+\end{multipleChoice}
+
+\end{problem}
+
+\end{problem}
+
+
+\begin{mybox}{\textbf{Notation for Derivatives}}
+
+
+\normalsize
+\begin{tabular}{lllll}
+\hline
+& & & & \\
+\textbf{First Derivative} & $f'(x)$ & \hspace{0.1in} $\displaystyle \frac{dy}{dx}$ \hspace{0.1in} &  \hspace{0.1in} $y'$ \hspace{0.1in} & $ \displaystyle \frac{d}{dx} [f(x)]$\\
+
+
+& & & & \\
+\textbf{Second Derivative} & $f''(x)$ & \hspace{0.1in} $\displaystyle \frac{d^2y}{dx^2}$ \hspace{0.1in} &  \hspace{0.1in} $y''$ \hspace{0.1in} & $ \displaystyle \frac{d^2}{dx^2} [f(x)]$\\
+& & & & \\
+
+
+\textbf{Third Derivative} & $f'''(x)$ & \hspace{0.1in} $\displaystyle \frac{d^3y}{dx^3}$ \hspace{0.1in} &  \hspace{0.1in} $y'''$ \hspace{0.1in} & $ \displaystyle \frac{d^3}{dx^3} [f(x)]$\\
+& & & & \\
+
+
+\textbf{Fourth Derivative} & $f^{(4)}(x)$ & \hspace{0.1in} $\displaystyle \frac{d^4y}{dx^4}$ \hspace{0.1in} & \hspace{0.1in} $y^{(4)}$ \hspace{0.1in} & $ \displaystyle \frac{d^4}{dx^4} [f(x)]$\\
+
+\hspace{0.5in} .&  & & & \\
+\hspace{0.5in} .&  & & & \\
+\hspace{0.5in} .&  & & & \\
+
+\textbf{\emph{n}-th Derivative} & $f^{(n)}(x)$ & \hspace{0.1in} $\displaystyle \frac{d^ny}{dx^n}$ \hspace{0.1in} & \hspace{0.1in} $y^{(n)}$ \hspace{0.1in} & $ \displaystyle \frac{d^n}{dx^n} [f(x)]$\\
+& & & & \\
+\end{tabular}
+
+\end{mybox}
+
+
+\begin{mybox}[]
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Rule} & \textbf{Formula} \\ \hline
+&  \\
+\textbf{Constant Rule} & $\frac{d}{dx} [c] = 0$ \\
+&  \\
+\textbf{Constant Multiple Rule} & $\frac{d}{dx}[cf(x)] = c f'(x)$ \\
+&  \\
+\textbf{Sum and Difference Rule} & $\frac{d}{dx}[f(x) \pm g(x)]  = f'(x) + g'(x) $\\
+&  \\
+\textbf{Power Rule} & $\frac{d}{dx}[x^n] = nx^{n-1}$ \\
+&  \\
+\textbf{Product Rule} & $\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)$ \\
+&  \\
+\textbf{Quotient Rule} & $\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$ \\
+&  \\
+\textbf{Chain Rule} & $\frac{d}{dx}[f(g(x))] = f'(g(x)) \cdot g'(x)$ \\
+&  \\
+\textbf{General Power Rule} & $\frac{d}{dx}[u(x)]^n = n[u(x)]^{n-1} \cdot u'(x)$ \\
+&  \\
+\end{tabular}
+\end{center}
+
+\end{mybox}
+
+
+\begin{remark}
+\textbf{Quotient Rule} If we think of the function in the numerator as the Hi function and the function in the denominator as the Lo function,
+we can remember the Quotient Rule as
+\[ \frac{d}{dx} \left[\frac{\textrm{Hi}}{\textrm{Lo}} \right]  = \frac{\textrm{HiD  Lo} - \textrm{LoD  Hi}}{(\textrm{Lo})^2}  \]
+
+where HiD is the derivative of the Hi function and LoD is the derivative of the Lo function.
+\end{remark}
+
+\begin{remark}
+\textbf{General Power Rule}
+While the Chain Rule handles derivatives of all composite functions, the General Power Rule serves as a specialized shortcut for differentiating powers of functions
+and is often easier to apply.
+\end{remark}
+
+
+\begin{theorem}[\textbf{Derivatives of the Natural Exponential and Logarithmic Functions}]
+
+
+\[ \frac{d}{dx} [e^x ] = e^x \]
+
+\[ \frac{d}{dx} [\ln x ] = \frac{1}{x} \]
+
+If $u$ is a function of $x,$ then by the Chain rule
+
+\[ \frac{d}{dx} [e^u ] = e^u \cdot u' \]
+
+\[ \frac{d}{dx} [\ln u ] = \frac{1}{u} \cdot u'  \]
+
+\end{theorem}
+
+\begin{theorem}[\textbf{Derivatives of Trigonometric Functions}]
+
+\[
+\begin{aligned}
+    \frac{d}{dx} (\sin x) &= \cos x  & \hspace{2cm} \frac{d}{dx} (\cos x) &= -\sin x \\
+    \frac{d}{dx} (\tan x) &= \sec^2 x & \hspace{2cm} \frac{d}{dx} (\cot x) &= -\csc^2 x \\
+    \frac{d}{dx} (\sec x) &= \sec x \tan x & \hspace{2cm} \frac{d}{dx} (\csc x) &= -\csc x \cot x
+\end{aligned}
+\]
+
+\end{theorem}
+
+\begin{theorem}[\textbf{Transcendental Functions and the Chain Rule}]
+
+If $u$ is a function of $x,$ then
+
+\[ \frac{d}{dx}[\sin u] = (\cos u) u'  \hspace{0.88in} \frac{d}{dx}[\cos u] = (-\sin u) u' \]
+\[ \frac{d}{dx}[\tan u] = (\sec^2 u) u' \hspace{0.8in} \frac{d}{dx}[\cot u] = (-\csc^2 u) u' \]
+\[ \frac{d}{dx}[\sec u] \hspace{0.01in} = \hspace{0.01in} (\sec u \tan u) u' \hspace{0.5in} \frac{d}{dx}[ \csc u] =
+(-\csc u \cot u) u' \]
+\[ \frac{d}{dx}[e^u] = e^u u' \hspace{0.8in} \frac{d}{dx} [\ln u] = \frac{u'}{u}  \hspace{0.8in} \frac{d}{dx} [  \ln |u|   ] = \frac{u'}{u} \]
+
+\end{theorem}
+
+
 
 \end{document}
 
