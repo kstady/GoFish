@@ -1,11 +1,13 @@
-services: 
+services:
   app:
-    image: ghcr.io/ximeraproject/ximeralatex:v2.7.9-full
+    image: ghcr.io/ximeraproject/ximeralatex:v2.7.9
+    # image: ghcr.io/ximeraproject/ximeralatex:v2.7.9-full
     volumes:
+      # This is where VS Code should expect to find your project's source code and the value of "workspaceFolder" in .devcontainer/devcontainer.json
       - ..:/code:cached
-    command: /bin/sh -c "while sleep 1000; do :; done"
-    network_mode: "service:ximeraserver"
+    command: /bin/sh -c "while sleep 1000; do :; done"   # run forever
+    network_mode: service:ximeraserver
   ximeraserver:
     image: registry.gitlab.kuleuven.be/wet/ximera/ximeradocker:2.3_b
     ports:
-      - "2080:2000"
+      - "2080:2000"          # Expose Ximera on port 2080
