@@ -24,6 +24,57 @@ know two points that lie on the line.  The tangent line and $f$ have point $P$ c
 coordinates of a second point.  So, instead of finding the exact slope, let's approximate it using the slope of a secant line.  A \textbf{secant line} 
 is a line that passes through two points on a curve.
 
+\begin{center} 
+\begin{tikzpicture} 
+\begin{axis}[ 
+    axis line style = {thick}, 
+    axis lines = middle, 
+    xmin = -1.0, xmax = 3.5, 
+    ymin = -2.0, ymax = 15, 
+    % Makes the x and y axis labels larger
+    label style={font=\large}, 
+    % Makes all numerical and variable tick labels larger
+    tick label style={font=\large}, 
+    % Use \strut to align the baselines of the labels perfectly 
+    xtick = {1.2, 2.2}, 
+    xticklabels = {\strut $x$, \strut $x + \Delta x$}, 
+    ytick = {3.32, 9.02}, 
+    yticklabels = {$f(x)$, $f(x + \Delta x)$}, 
+    xlabel = {$x$}, 
+    ylabel = {$y$}, 
+    every axis x label/.style={at={(current axis.right of origin)}, anchor=west}, 
+    every axis y label/.style={at={(current axis.above origin)}, anchor=south}, 
+    samples = 100, 
+    clip = false, 
+    scale = 1.5, 
+] 
+
+% 1. The Curve 
+\addplot [black, very thick, domain=-0.8:2.7] {exp(x)}; 
+
+% 2. Tangent Line: Blue 
+\addplot [glaucous!90!black, thick, domain=-0.2:3.2] {3.3201*x - 0.6640} 
+    node[pos=1, right, yshift=5pt, xshift=-4.3pt] {\large\textbf{Tangent}}; 
+
+% 3. Secant Line: Orange 
+\addplot [orange!80!black, dashed, thick, domain=0.5:3.05] {5.70*x - 3.52} 
+    node[pos=1, right, yshift=5.3pt, xshift=-1.2pt] {\large\textbf{Secant}}; 
+
+% 4. Points P and Q 
+\addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1.2, 3.32) (2.2, 9.02)}; 
+\node[anchor=south, yshift=3pt] at (1.2, 3.32) {\large$\mathbf{P}$}; 
+\node[anchor=south, yshift=3pt] at (2.15, 9.02) {\large$\mathbf{Q}$}; 
+
+% 5. Dotted lines to axes 
+\draw [gray, thick, dotted] (1.2, 0) -- (1.2, 3.32) -- (0, 3.32); 
+\draw [gray, thick, dotted] (2.2, 0) -- (2.2, 9.02) -- (0, 9.02); 
+
+\end{axis} 
+\end{tikzpicture} 
+
+% Alt Text 
+\xmalt{A graph shows a black exponential curve rising from left to right. Two points are marked on the curve: point P at $x$ and point Q further to the right at $x + \Delta x.$ A solid blue line labeled "Tangent" touches the curve exactly at point P. A dashed orange line labeled "Secant" passes through both points P and Q. Gray dotted lines drop from both points to the $x$ and $y$ axes to mark their coordinates as $x, x + \Delta x, f(x)$ and $f(x + \Delta x).$} 
+\end{center}
 
 
 \begin{center}
@@ -62,7 +113,7 @@ is a line that passes through two points on a curve.
     % 4. Points P and Q
     \addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1.2, 3.32) (2.2, 9.02)};
     \node[anchor=south, yshift=3pt] at (1.2, 3.32) {$\mathbf{P}$};
-    \node[anchor=south, yshift=3pt] at (2.15, 9.02) {$Q$};
+    \node[anchor=south, yshift=3pt] at (2.15, 9.02) {$\mathbf{Q}$};
 
     % 5. Dotted lines to axes
     \draw [gray, thick, dotted] (1.2, 0) -- (1.2, 3.32) -- (0, 3.32);
