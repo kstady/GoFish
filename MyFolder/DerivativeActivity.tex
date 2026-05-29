@@ -16,9 +16,7 @@
 \label{xim:DerivativeActivity}
 
 
-
 \section*{The Limit Definition of the Derivative}
-
 
 Recall that \textbf{the slope of a curve at a point is equal to the slope of the tangent line at that point}.  The figure below shows the graph
 of a function $f(x)$ and its tangent line at point $P (x, f(x)).$  To find the slope of the tangent line at $P$ using the slope formula, we need to 
@@ -43,7 +41,8 @@ is a line that passes through two points on a curve.
     every axis x label/.style={at={(current axis.right of origin)}, anchor=west},
     every axis y label/.style={at={(current axis.above origin)}, anchor=south},
     samples = 100,
-    clip = false
+    clip = false,
+    scale = 1.4,
 ]
     % 1. The Curve
     \addplot [black, very thick, domain=-0.8:2.7] {exp(x)};
@@ -303,6 +302,10 @@ If $u$ is a function of $x,$ then by the Chain rule
 \]
 
 \end{theorem}
+
+\begin{remark}
+    Notice that the derivatives of all of the ``co'' trigonometric functions (cosine, cosecant, cosecant) are negative.  
+\end{remark}
 
 \begin{theorem}[\textbf{Trigonometric Functions and the Chain Rule}]
 
