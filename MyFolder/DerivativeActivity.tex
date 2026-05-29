@@ -47,8 +47,9 @@ is a line that passes through two points on a curve.
     samples = 100, 
     clip = false, 
     scale = 1.4, 
-] 
-% 1. The Curve 
+    ] 
+
+    % 1. The Curve 
 \addplot [black, very thick, domain=-0.8:2.7] {exp(x)}; 
 
 % 2. Tangent Line: Blue 
@@ -67,10 +68,15 @@ is a line that passes through two points on a curve.
 % 5. Dotted lines to axes 
 \draw [gray, thick, dotted] (1.2, 0) -- (1.2, 3.32) -- (0, 3.32); 
 \draw [gray, thick, dotted] (2.2, 0) -- (2.2, 9.02) -- (0, 9.02); 
+
 \end{axis} 
 \end{tikzpicture} 
-% Alt Text 
-\xmalt{A graph shows a black exponential curve rising from left to right. Two points are marked on the curve: point P at $x$ and point Q further to the right at $x + \Delta x.$ A solid blue line labeled "Tangent" touches the curve exactly at point P. A dashed orange line labeled "Secant" passes through both points P and Q. Gray dotted lines drop from both points to the $x$ and $y$ axes to mark their coordinates as $x, x + \Delta x, f(x)$ and $f(x + \Delta x).$} 
+
+\xmalt{A graph shows a black exponential curve rising from left to right.  Two points are marked on the curve: point $P$ at $x$ and point $Q$ 
+further to the right at $x + \Delta x.$  A solid blue line labeled ``Tangent'' touches the curve exactly at point $P.$  A dashed orange line 
+labeled ``Secant'' passes through both points $P$ and $Q.$  Gray dotted lines drop from both points to the $x$ and $y$ axes to mark their 
+coordinates as $x, x + \Delta x, f(x)$ and $f(x + \Delta x).$} 
+
 \end{center}
 
 
@@ -93,7 +99,7 @@ is a line that passes through two points on a curve.
     samples = 100,
     clip = false,
     scale = 1.4,
-]
+    ]
     % 1. The Curve
     \addplot [black, very thick, domain=-0.8:2.7] {exp(x)};
 
