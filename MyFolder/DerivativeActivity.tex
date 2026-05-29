@@ -46,17 +46,19 @@ is a line that passes through two points on a curve.
     clip = false,
     scale = 1.4,
     font=\bfseries,
+    % Apply bold math to the tick labels automatically
+    tick label style={font=\bfseries\boldmath},
     ]
     % 1. The Curve
     \addplot [black, very thick, domain=-0.8:2.7] {exp(x)};
 
     % 2. Tangent Line: Blue
     \addplot [glaucous!90!black, thick, domain=-0.2:3.2] {3.3201*x - 0.6640}
-        node[pos=1, right, yshift=5pt, xshift=-4.3pt] {\small \textbf{Tangent}};
+        node[pos=1, right, yshift=5pt, xshift=-4.3pt] {\textbf{Tangent}};
 
     % 3. Secant Line: Orange
     \addplot [orange!80!black, dashed, thick, domain=0.5:3.05] {5.70*x - 3.52}
-        node[pos=1, right, yshift=5.3pt, xshift=-1.2pt] {\small \textbf{Secant}};
+        node[pos=1, right, yshift=5.3pt, xshift=-1.2pt] {\textbf{Secant}};
 
     % 4. Points P and Q
     \addplot[only marks, mark=*, mark size=1.8pt] coordinates {(1.2, 3.32) (2.2, 9.02)};
