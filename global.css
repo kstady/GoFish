@@ -10,6 +10,24 @@
  */ 
  
  
+/* *************************** Save, then use Ctrl F5 on the webpage whenever you make changes to this file. **********   */
+
+
+/* ************************************** Changing the Font! ***********************************************   */
+
+/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
+
+.main-activity {
+    font-size: 22px !important;
+    line-height: 1.55 !important;
+    color: hsl(0, 0%, 10%) !important;
+}
+
+
+/* *********************************** Done changing the font ****************************************** */
+
+
+
 .xmhint::before {
     content: "Show hint" counter(hint_number, notfirst);
 }
@@ -217,3 +235,232 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .outcomeHead:hover + .outcomeContent {
 	display: block;
 } */
+
+
+
+/*  **************************** Modifications made with the help of AI. *****************************  */
+/*  **************************** Save, then use CTRL F5 in HTML to apply changes. *****************************  */
+
+/* Only applies spacing if it is inside the main-activity container, not the TOC. */
+.main-activity p, 
+.main-activity .problem, 
+.main-activity .theorem, 
+.main-activity .definition, 
+.main-activity .exercise, 
+.main-activity .remark, 
+.main-activity h2, 
+.main-activity h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    display: block;
+}
+
+/* List spacing specifically for the lesson */
+.main-activity li {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+/* The item[] fix - also scoped to the activity */
+.main-activity li[data-label=""]::marker, 
+.main-activity li[data-label=" "]::marker, 
+.main-activity li[data-label="~"]::marker {
+    content: none !important;
+}
+
+/* Apply spacing to Multiple Choice and Select All questions inside the main lesson content */
+.main-activity .multiple-choice,
+.main-activity .select-all {
+    margin-top: 2em !important;
+}
+
+/* 1. Removes the default lavender background for Problem */
+div[titletext*="Problem"] {
+    background-color: #fdfdfd !important; /* Glaucous Blue Tint */
+    border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
+    padding: 1.5em !important;
+    color: #333 !important;
+}
+
+/* 2. Style the paragraph inside - added top margin for paragraph breaks */
+div[titletext*="Problem"] p {
+    margin-top: 1rem !important; /* This creates the space BETWEEN paragraphs */
+    margin-bottom: 0 !important;
+    font-size: 1.1em !important;
+}
+
+/* 3. This ensures the VERY FIRST paragraph doesn't have an extra gap at the top */
+div[titletext*="Problem"] p:first-of-type {
+    margin-top: 0 !important;
+}
+
+/* Adds spacing to anything inside a center environment */
+.main-activity .center {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+}
+
+/* Adds vertical space before and after TikZ/Image environments */
+.main-activity .image-environment {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+}
+
+/* Removes bullets from any itemize list nested inside an enumerate list for nice indenting */
+.main-activity ol li ul {
+    list-style-type: none !important;
+}
+
+/* Force the first level of lists inside a problem to use (a), (b), (c) */
+.main-activity .problem ol {
+    list-style-type: lower-alpha !important;
+}
+
+/* Adds the parentheses around the letter: (a), (b), etc. */
+.main-activity .problem ol > li::marker {
+    content: "(" counter(list-item, lower-alpha) ") " !important;
+}
+
+/* Adds vertical space between problem parts (a, b, c...) */
+.main-activity .problem ol > li {
+    margin-bottom: 2.5rem !important;
+}
+
+/* Ensures the Multiple Choice options themselves aren't too cramped */
+.main-activity .multiple-choice {
+    margin-bottom: 1rem !important;
+}
+
+/* Remove bullets from itemize lists inside a description environment */
+.main-activity .description ul {
+    list-style-type: none !important;
+    list-style: none !important;
+    padding-left: 1.5rem !important; /* This creates the indentation */
+    margin-top: 0 !important;
+}
+
+/* Ensure the individual items don't have bullets or extra markers */
+.main-activity .description ul li {
+    list-style-type: none !important;
+    display: block !important;
+}
+
+
+/* Remove bullets from itemize lists inside any Problem environment */
+.main-activity .problem ul {
+    list-style-type: none !important;
+    list-style: none !important;
+    padding-left: 1.5rem !important; /* Matches the indentation of your descriptions */
+}
+
+/* Ensure sub-items don't have markers */
+.main-activity .problem ul li {
+    list-style-type: none !important;
+}
+
+
+/* TOC CHANGES */
+
+/* Changing color of TOC */
+/* 1. THE PART BAR: Simple solid block */
+.activity-card.part {
+    background-color: #6082b6 !important;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important; /* Shorter top/bottom padding, keeps wide side padding */
+}
+
+/* 2. THE SECTIONS: Glaucous and Orange on Click */
+.activity-card.section {
+    background-color: #9fb4d3 !important;
+}
+.activity-card.section.active,
+.activity-card.section:active {
+    background-color: #DD8A2E !important; 
+}
+
+/* 3. THE SUBSECTIONS: White and Orange on Click */
+.activity-card.activity {
+    background-color: #ffffff !important;
+    border: 2px solid #6082b6 !important;
+}
+.activity-card.activity.active,
+.activity-card.activity:active {
+    background-color: #DD8A2E !important; 
+}
+
+/* 4. THE SIDEBAR: Tiered Blue (No teal) */
+.sidebar, .nav-sidebar {
+    background-color: #cfd9e9 !important;
+}
+.nav-sidebar ul.nav, .nav-sidebar .nav-second-level {
+    background-color: #9fb4d3 !important;
+}
+.nav-sidebar li.active > a {
+    background-color: #DD8A2E !important;
+}
+
+
+/* Removes the automatic number (1, 2, 3) from Part tiles */
+.activity-card.part::before,
+.card-sectionheading.part::before,
+.part::before {
+    content: none !important;
+    display: none !important;
+}
+
+/* If the '1' is inside the tile text itself */
+.activity-card.part .part-counter,
+.activity-card.part [data-part-counter] {
+    display: none !important;
+}
+
+/* ******** TOC Changes (Font and Spacing)  ******************* */
+
+/* ==========================================================================
+   TARGET THE ACTIVE ACTIVITY-CARDS TO INCREASE TOC FONT SIZE
+   ========================================================================== */
+
+/* 1. Scale up the text size for all structural activity cards in the TOC */
+.activity-card,
+.activity-card * {
+    font-size: 17px !important; /* Forces the text inside the TOC cards up to 18px */
+}
+
+/* 2. Re-scale the part labels to match or sit slightly larger if desired */
+.activity-card.part,
+.activity-card.part * {
+    font-size: 22px !important; 
+}
+
+
+
+/* ==========================================================================
+   FORCE SPACE BETWEEN SUBSECTION NUMBERS AND TITLES
+   ========================================================================== */
+
+/* 1. Add horizontal padding inside the title anchor tags to separate numbers and text */
+.activity-card a {
+    padding-left: 12px !important; /* Creates a clean, protective gap between the 1.5.1 numbers and titles */
+    display: inline-block !important;
+}
+
+/* 2. Alternative fix if the template uses a hidden inline separator span */
+.activity-card span {
+    margin-right: 10px !important;
+}
+
+
+/* Keep main content layout flush against the newly narrowed TOC column */
+.main-activity, 
+main, 
+#main-content {
+    width: auto !important;
+    margin-left: 0 !important;        /* Prevents random white space gaps from creeping in */
+    padding-left: 10px !important;    /* Clean spacing padding between lesson layout and TOC */
+}
+
+/* ******** Done with changes ********************************  */
+
+/* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
