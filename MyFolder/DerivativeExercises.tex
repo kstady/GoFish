@@ -1,0 +1,201 @@
+\documentclass{ximera}
+
+
+\title{Derivative Practice Problems}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+\begin{abstract}
+    Time to practice!
+\end{abstract}
+\maketitle
+\label{xim:DerivativeExercises}
+
+
+\section*{Additional Practice Problems}
+
+
+\begin{problem}
+Consider the following limit representing the derivative of a function $f(x)$ at a specific point $x=a$:
+\[
+L = \lim_{\Delta x \to 0} \frac{\sin\left(\frac{\pi}{3} + \Delta x\right) - \frac{\sqrt{3}}{2}}{\Delta x}
+\]
+
+Based on the limit definition of a derivative, $f'(a) = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x}$, identify the function $f(x)$ and the point $a$.
+\begin{multipleChoice}
+    \choice{$f(x) = \sin(x)$ and $a = 0$}
+    \choice[correct]{$f(x) = \sin(x)$ and $a = \frac{\pi}{3}$}
+    \choice{$f(x) = \cos(x)$ and $a = \frac{\pi}{3}$}
+    \choice{$f(x) = \sin(x)$ and $a = \frac{\sqrt{3}}{2}$}
+\end{multipleChoice}
+
+Now evaluate the limit by computing $f'(a)$:
+\[
+L = \answer{1/2}
+\]
+\end{problem}
+
+
+\begin{problem}
+Let $f(x) = 3x^2$. Which of the following expressions correctly sets up the limit definition for $f'(x)$?
+
+\begin{multipleChoice}
+    \choice{$\lim_{\Delta x \to 0} \frac{3x^2 + \Delta x - 3x^2}{\Delta x}$}
+    \choice{$\lim_{\Delta x \to 0} \frac{3(x^2 + \Delta x^2) - 3x^2}{\Delta x}$}
+    \choice[correct]{$\lim_{\Delta x \to 0} \frac{3(x + \Delta x)^2 - 3x^2}{\Delta x}$}
+    \choice{$\lim_{\Delta x \to 0} \frac{3(x + \Delta x)^2 + 3x^2}{\Delta x}$}
+\end{multipleChoice}
+
+Expand and simplify the numerator to evaluate the limit. The derivative function is:
+\[
+f'(x) = \answer{6x}
+\]
+\end{problem}
+
+
+
+\begin{problem}
+Find the derivative of the function 
+\[
+f(x) = 4x^5 - \frac{3}{x^2} + 2\sqrt{x}
+\]
+First, rewrite the function with rational and negative exponents:
+\[
+f(x) = 4x^5 - 3x^{\answer{-2}} + 2x^{\answer{1/2}}
+\]
+Now, compute the derivative using the power rule:
+\[
+f'(x) = \answer{20x^4 + 6x^{-3} + x^{-1/2}}
+\]
+\end{problem}
+
+
+\begin{problem}
+Let $g(\theta) = \theta^3 \cos(\theta)$. Find $g'(\theta)$ using the product rule.
+\[
+g'(\theta) = \answer{3\theta^2} \cdot \cos(\theta) + \theta^3 \cdot \left(\answer{-\sin(\theta)}\right)
+\]
+Combining these terms into a single expression gives:
+\[
+g'(\theta) = \answer{3\theta^2\cos(\theta) - \theta^3\sin(\theta)}
+\]
+\end{problem}
+
+
+\begin{problem}
+Compute the derivative of 
+\[
+y = \frac{\sin(x)}{x^2 + 1}
+\]
+According to the quotient rule, $\frac{d}{dx}\left[\frac{u}{v}\right] = \frac{u'v - uv'}{v^2}$. Identify the components:
+\begin{itemize}
+    \item The derivative of the numerator is $\answer{\cos(x)}$
+    \item The derivative of the denominator is $\answer{2x}$
+\end{itemize}
+Putting it all together, the final derivative is:
+\[
+\frac{dy}{dx} = \frac{\answer{(x^2+1)\cos(x) - 2x\sin(x)}}{(x^2+1)^2}
+\]
+\end{problem}
+
+
+\begin{problem}
+Find the derivative of $h(x) = \tan^4(x)$. 
+Remember that this expression can be rewritten as $h(x) = (\tan(x))^4$.
+
+Applying the chain rule, we differentiate the outer power function first:
+\[
+h'(x) = 4(\tan(x))^{\answer{3}} \cdot \frac{d}{dx}\left[\tan(x)\right]
+\]
+Since the derivative of $\tan(x)$ is $\answer{\sec^2(x)}$, the completely simplified derivative is:
+\[
+h'(x) = \answer{4\tan^3(x)\sec^2(x)}
+\]
+\end{problem}
+
+
+\begin{problem}
+Differentiate the function 
+\[
+F(x) = \sqrt{5x + \sin(x)}
+\]
+Treating the square root as an outer power of $1/2$, the first step of the chain rule yields:
+\[
+F'(x) = \frac{1}{2}(5x + \sin(x))^{-1/2} \cdot \frac{d}{dx}\left[ \answer{5x + \sin(x)} \right]
+\]
+Evaluating the inner derivative gives the final answer:
+\[
+F'(x) = \frac{\answer{5 + \cos(x)}}{2\sqrt{5x + \sin(x)}}
+\]
+\end{problem}
+
+
+\begin{problem}
+Suppose $f(x)$ is a differentiable function everywhere. At a specific point $x = c$, the graph of $y = f(x)$ is **increasing** and **concave down**. 
+
+What can you conclude about the signs of $f'(c)$ and $f''(c)$?
+\begin{multipleChoice}
+    \choice{$f'(c) > 0$ and $f''(c) > 0$}
+    \choice[correct]{$f'(c) > 0$ and $f''(c) < 0$}
+    \choice{$f'(c) < 0$ and $f''(c) > 0$}
+    \choice{$f'(c) < 0$ and $f''(c) < 0$}
+\end{multipleChoice}
+
+Which of the following lines could be tangent to $y = f(x)$ at $x = c$?
+\begin{multipleChoice}
+    \choice{$y = -3x + 5$}
+    \choice{$y = -4$}
+    \choice[correct]{$y = 2x - 1$}
+\end{multipleChoice}
+\end{problem}
+
+
+\begin{problem}
+Let $f(x)$ be a function defined on all real numbers. Select **all** statements that are mathematically true.
+
+\begin{selectAll}
+    \choice[correct]{If $f(x)$ is differentiable at $x=c$, then $f(x)$ must be continuous at $x=c$.}
+    \choice{If $f(x)$ is continuous at $x=c$, then $f(x)$ must be differentiable at $x=c$.}
+    \choice[correct]{If $f(x)$ is not continuous at $x=c$, then $f(x)$ cannot be differentiable at $x=c$.}
+    \choice{If $f(x)$ has a sharp corner or cusp at $x=c$, then $\lim_{x \to c} f(x)$ does not exist.}
+\end{selectAll}
+
+\begin{feedback}
+Remember: Differentiability is a stronger condition than continuity. A classic counterexample to the second choice is $f(x) = |x|$ at $x=0$, which is continuous but has a sharp corner (making it non-differentiable).
+\end{feedback}
+\end{problem}
+
+\begin{problem}
+Let $f(x) = 2\sin(x) + x$ on the closed interval $[0, 2\pi]$. We want to find all $x$-values where the graph of $f(x)$ has a horizontal tangent line.
+
+First, recall that a curve has a horizontal tangent line when its derivative is equal to zero. 
+Compute the derivative of $f(x)$:
+\[
+f'(x) = \answer{2\cos(x) + 1}
+\]
+
+Now, set $f'(x) = 0$ and solve for $\cos(x)$:
+\[
+\cos(x) = \answer{-1/2}
+\]
+
+On the interval $[0, 2\pi]$, list the two values of $x$ where this equation is true. Enter the smaller value first.
+\begin{itemize}
+    \item Smaller $x$-value: $x = \answer{2\pi/3}$
+    \item Larger $x$-value: $x = \answer{4\pi/3}$
+\end{itemize}
+
+\begin{question}
+At these points, what is the slope of the normal line (the line perpendicular to the tangent line)?
+\begin{multipleChoice}
+    \choice{The slope is $0$.}
+    \choice{The slope is $-1$.}
+    \choice[correct]{The slope is undefined (vertical line).}
+    \choice{The slope is $1$.}
+\end{multipleChoice}
+\end{question}
+\end{problem}
+
+
+\end{document}

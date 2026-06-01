@@ -15,13 +15,44 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
+/* LOAD FONT */
+@font-face {
+    font-family: 'MLModern';
+    src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
 
-.main-activity {
-    font-size: 22px !important;
-    line-height: 1.55 !important;
-    color: hsl(0, 0%, 10%) !important;
 }
+
+/* Apply font to EVERYTHING, but keep standard text at normal weight */
+.main-activity,
+.main-activity p {
+    font-family: "MLModern", serif !important;
+    font-weight: normal !important; /* Forces paragraphs to NOT be bold */
+}
+
+/* Apply font AND bold weight ONLY to headers and titles */
+.main-activity h1,
+.main-activity h2,
+.main-activity h3,
+.main-activity h4,
+.main-activity .liketitleHead,
+.main-activity .likesectionHead,
+.main-activity .likesubsectionHead,
+.main-activity .problem-title,
+.main-activity .theorem-title,
+.main-activity div[titletext]::before {
+    font-family: "MLModern", serif !important;
+    font-weight: bold !important; /* Only these elements get bold */
+}
+
+
+/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
+.main-activity {
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    color: #1a1a1a !important;
+}
+
+
 
 
 /* *********************************** Done changing the font ****************************************** */
