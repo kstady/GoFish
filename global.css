@@ -492,6 +492,44 @@ main,
     padding-left: 10px !important;    /* Clean spacing padding between lesson layout and TOC */
 }
 
+
+/* ==========================================================================
+   Fix Dutch jQuery UI Accordion Labels ("Klap uit" / "Klap in")
+   ========================================================================== */
+
+/* 1. Target the header when it is closed (Hides "Klap uit") */
+h3.ui-accordion-header.ui-accordion-header-collapsed {
+    font-size: 0 !important;
+}
+
+h3.ui-accordion-header.ui-accordion-header-collapsed::after {
+    content: "Click to Expand" !important;
+    font-size: 1rem !important; /* Restores text size for the replacement */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 2. Target the header when it is open (Hides "Klap in") */
+h3.ui-accordion-header[aria-expanded="true"] {
+    font-size: 0 !important;
+}
+
+h3.ui-accordion-header[aria-expanded="true"]::after {
+    content: "Click to Collapse" !important;
+    font-size: 1rem !important; /* Restores text size for the replacement */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* 3. Protect the little triangle icon so it remains visible */
+h3.ui-accordion-header .ui-accordion-header-icon {
+    font-size: 12px !important;
+    display: inline-block !important;
+    margin-right: 0.5em;
+}
+
+
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
