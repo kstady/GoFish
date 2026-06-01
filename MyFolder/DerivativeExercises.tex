@@ -16,35 +16,16 @@
 \section*{Additional Practice Problems}
 
 
-\begin{problem}
-Consider the following limit representing the derivative of a function $f(x)$ at a specific point $x=a$:
-\[
-L = \lim_{\Delta x \to 0} \frac{\sin\left(\frac{\pi}{3} + \Delta x\right) - \frac{\sqrt{3}}{2}}{\Delta x}
-\]
-
-Based on the limit definition of a derivative, $f'(a) = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x}$, identify the function $f(x)$ and the point $a$.
-\begin{multipleChoice}
-    \choice{$f(x) = \sin(x)$ and $a = 0$}
-    \choice[correct]{$f(x) = \sin(x)$ and $a = \frac{\pi}{3}$}
-    \choice{$f(x) = \cos(x)$ and $a = \frac{\pi}{3}$}
-    \choice{$f(x) = \sin(x)$ and $a = \frac{\sqrt{3}}{2}$}
-\end{multipleChoice}
-
-Now evaluate the limit by computing $f'(a)$:
-\[
-L = \answer{1/2}
-\]
-\end{problem}
 
 
 \begin{problem}
 Let $f(x) = 3x^2$. Which of the following expressions correctly sets up the limit definition for $f'(x)$?
 
 \begin{multipleChoice}
-    \choice{$\lim_{\Delta x \to 0} \frac{3x^2 + \Delta x - 3x^2}{\Delta x}$}
-    \choice{$\lim_{\Delta x \to 0} \frac{3(x^2 + \Delta x^2) - 3x^2}{\Delta x}$}
-    \choice[correct]{$\lim_{\Delta x \to 0} \frac{3(x + \Delta x)^2 - 3x^2}{\Delta x}$}
-    \choice{$\lim_{\Delta x \to 0} \frac{3(x + \Delta x)^2 + 3x^2}{\Delta x}$}
+    \choice{$\lim\limits_{\Delta x \to 0} \frac{3x^2 + \Delta x - 3x^2}{\Delta x}$}
+    \choice{$\lim\limits_{\Delta x \to 0} \frac{3(x^2 + \Delta x^2) - 3x^2}{\Delta x}$}
+    \choice[correct]{$\lim\limits_{\Delta x \to 0} \frac{3(x + \Delta x)^2 - 3x^2}{\Delta x}$}
+    \choice{$\lim\limits_{\Delta x \to 0} \frac{3(x + \Delta x)^2 + 3x^2}{\Delta x}$}
 \end{multipleChoice}
 
 Expand and simplify the numerator to evaluate the limit. The derivative function is:
@@ -93,10 +74,14 @@ According to the quotient rule, $\frac{d}{dx}\left[\frac{u}{v}\right] = \frac{u'
     \item The derivative of the numerator is $\answer{\cos(x)}$
     \item The derivative of the denominator is $\answer{2x}$
 \end{itemize}
+
+\begin{prompt}
 Putting it all together, the final derivative is:
 \[
 \frac{dy}{dx} = \frac{\answer{(x^2+1)\cos(x) - 2x\sin(x)}}{(x^2+1)^2}
 \]
+\end{prompt}
+
 \end{problem}
 
 
