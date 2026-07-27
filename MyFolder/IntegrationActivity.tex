@@ -1,0 +1,186 @@
+\documentclass{ximera}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+
+\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
+\definecolor{darkblue}{rgb}{0.4,0.5,0.85}
+\definecolor{blue}{rgb}{0.1,0.3,.95}
+%\definecolor{blue}{rgb}{0.1,0.2,0.90}
+\definecolor{pink}{rgb}{0.6,0.4,0.7}
+\definecolor{green}{rgb}{0.4,0.6,0.5}
+\definecolor{yellow}{rgb}{0.1,0.6,0.8}
+\definecolor{red}{rgb}{0.8,0.1,0.5}
+\definecolor{glaucous}{rgb}{0.38,0.51,0.71}
+\definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
+
+
+\title{A Basic Review of Integration}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+\begin{abstract}
+    A basic review of antiderivatives for students who have practiced.......
+\end{abstract}
+\maketitle
+\label{xim:IntegrationActivity}
+
+
+
+\section*{Antiderivatives}
+
+We will now reverse the process of differentiation.  That is, we will be
+given a derivative and asked to find the original function. The original function is called
+the \textbf{antiderivative} and the process of finding it is called
+\textbf{antidifferentiation} or \textbf{integration}.
+
+\begin{theorem}{Definition of an Antiderivative}
+A function $F(x)$ is an \textbf{antiderivative} of $f(x)$ if $F'(x)=f(x).$
+\end{theorem}
+
+\begin{remark}
+Not all functions have antiderivatives, but those that do have infinitely many.  For example, $F(x)=x^2$ is
+one antiderivative of $f(x)=2x$ since $F'(x) = f(x).$  However,
+$F(x)= x^2+C,$ where $C$ is a constant, is also an antiderivative
+of $f(x)=2x,$ thus there are infinitely many antiderivatives of
+$f(x)=2x.$
+
+\end{remark}
+
+
+
+\begin{problem}
+Is $F(x) = 3x^2+5$ an antiderivative of $f(x) = 6x?$
+
+\begin{multipleChoice}
+\choice{Yes, $F'(x) = f(x).$}
+\choice{No, $F'(x) \ne f(x).$}
+\end{multipleChoice}
+
+
+\end{problem}
+
+
+\begin{problem}
+Identify all antiderivatives of $f(x)=x^3+9.$
+
+\begin{selectAll}
+\choice[correct]{$F(x) = \frac{x^4}{4} + 9x -5$}
+\choice{$F(x) = x^4 + 9x + 2$}
+\choice[correct]{$F(x) = \frac{x^4}{4} + 9x$}
+\choice{$F(x) = x^4 + 9x + 6$}
+\end{selectAll}
+
+\end{problem}
+
+
+\subsection*{Notation}
+
+The following notation is used to denote the process of integration and is read as
+``the integral of $f(x)$."  The elongated s symbol $\textstyle \int$ is called the \textbf{integral sign} and
+the function $f(x)$ is called the \textbf{integrand}.  The differential symbol $dx$
+indicates that integration is with respect to the variable $x.$  Together, these symbols are referred to as
+an \textbf{indefinite integral}.
+
+\[ \int f(x) \ dx  \hspace{0.4in} \textrm{\textbf{Indefinite Integral}} \]
+
+
+If $F(x)$ is an antiderivative of $f(x)$ then we can write
+
+\[ \int f(x) \ dx = F(x) + C \]
+
+where $C$ is the \textbf{constant of integration}.
+
+\begin{problem}
+Identify the integrand in the problem below.
+
+\[ \int 5x + 4 \ dx = \frac{x^5}{5} + 4x + C \]
+
+\begin{multipleChoice}
+\choice{$dx$}
+\choice[correct]{$5x+4$}
+\choice{$\frac{x^5}{5} + 4x + C$}
+\choice{$\textstyle \int$}
+\end{multipleChoice}
+
+\end{problem}
+
+
+\begin{theorem}[\textbf{Basic Integration Rules}]
+
+You should know the following basic integration rules. The integration formulas for $\tan x$ and $\cot x$ aren’t
+listed since they are easily derived by rewriting them in terms of sine and cosine and using a $u$-substitution.
+
+\begin{enumerate}
+\item $\displaystyle \int 1 \ dx = x+C $
+
+
+\item $\displaystyle \int x^n \ dx = \frac{x^{n+1}}{n+1} + C, \hspace{0.3in} n \ne -1 $
+
+
+\item $\displaystyle \int \frac{1}{x} \ dx = \ln |x| + C $
+
+
+\item $\displaystyle \int e^x \ dx = e^x + C $
+
+
+\item $\displaystyle \int \sin x \ dx = - \cos x + C $
+
+
+\item $\displaystyle \int \cos x \ dx = \sin x + C$
+
+
+\item $\displaystyle  \int \sec^2 x \ dx = \tan x + C $
+
+
+\item $\displaystyle \int \csc^2 x \ dx = -\cot x + C $
+
+
+\item $\displaystyle \int \sec x \tan x \ dx = \sec x + C $
+
+
+\item $\displaystyle \int \csc x \ \cot x \ dx = -\csc x + C $
+
+
+\item $\displaystyle \int \frac{1}{\sqrt{a^2-u^2}} \ du =  \arcsin \frac{u}{a} + C, \hspace{0.2in} a > 0 $
+
+
+\item $\displaystyle \int \frac{1}{a^2 + u^2} \ du =  \frac{1}{a} \arctan \frac{u}{a} + C, \hspace{0.2in} a > 0$
+
+\end{enumerate}
+\end{theorem}
+
+
+\begin{remark}
+Often, we must first alter the form of an integrand prior to applying a basic integration rule. If an integrand is not in a
+familiar form, try using one of the following techniques to create a familiar form.
+
+
+\begin{enumerate}
+\item Expand a power.
+
+\item Separate a numerator into two or more terms.
+
+\item Use a trigonometric identity.
+
+\item Use a $u$-substitution. Try letting $u$ equal the inner most part of a composite function.
+
+\item Use polynomial division when the degree of the numerator is greater than or equal
+to the degree of the denominator.
+
+\item Complete the square.
+
+\item Look for integrands of the form $\textstyle \frac{u'}{u}$ or something close to that. Then let $u$ equal the
+denominator. These integrals yield the natural logarithmic function.
+
+\item If an integrand contains a logarithmic function of the form $f(x) = \ln g(x),$ try letting $u = \ln g(x).$ It won’t work in every case, but it often will.
+
+\item Look for integrands with denominators of the form $a^2+u^2$ and $\sqrt{a^2+ u^2}.$ These often result in an answer involving the inverse tangent function or inverse sine function.
+
+\end{enumerate}
+\end{remark}
+
+
+\end{document}
