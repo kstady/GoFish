@@ -69,7 +69,7 @@ the function $f(x)$ is called the \textbf{integrand}.  The differential symbol $
 indicates that integration is with respect to the variable $x.$  Together, these symbols are referred to as
 an \textbf{indefinite integral}.
 
-\[ \int f(x) \ dx  \hspace{0.4in} \textrm{\textbf{Indefinite Integral}} \]
+\[ \int f(x) \ dx  \hspace{0.4in} \textbf{Indefinite Integral}}\]
 
 
 If $F(x)$ is an antiderivative of $f(x)$ then we can write
@@ -167,5 +167,248 @@ denominator. These integrals yield the natural logarithmic function.
 \end{enumerate}
 \end{remark}
 
+\begin{problem}
+Follow the steps below to evaluate the indefinite integral.
+
+\[
+\int  3x^2 - \frac{4}{x^3} + \sqrt{x}  \, dx
+\]
+
+\begin{enumerate}
+\item Rewrite the integrand using standard exponents.
+
+\[
+\int 3x^2 - 4x^{\answer{-3}} + x^{\answer{1/2}} \ dx
+\]
+
+\item Apply the power rule term-by-term to find the family of antiderivatives.
+\[
+\int \left( 3x^2 - \frac{4}{x^3} + \sqrt{x} \right) \, dx = x^{\answer{3}} + \frac{\answer{2}}{x^2} + \frac{\answer{2} x^{\answer{3/2}}}{\answer{3}} + C
+\]
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Evaluate the indefinite integral.
+
+\[
+\int \frac{x e^x + 4}{x} \, dx
+\]
+
+
+Split the numerator of the integrand into two separate terms, then integrate term-by-term.  
+
+\[
+\int  \answer{e^x} + \frac{\answer{4}}{x} \, dx  = \answer{e^x} + 4\answer{\ln|x|} + C 
+\]
+
+
+\end{problem}
+
+
+\begin{problem}
+Follow the steps below to evaluate the indefinite integral.
+
+\[
+\int \frac{\sin x + \cos^3 x }{\cos^2 x} \, dx
+\]
+
+\begin{enumerate}
+\item First, split the numerator of the integrand into two separate terms,
+
+\[
+\int \frac{\sin x}{\cos^2 x} + \answer{\cos x}  \, \answer{dx}
+\]
+
+\item The first term can be rewritten as follows.  Simplify this term using standard trigonometric identities.
+
+\[ \frac{\sin x}{\cos x} \cdot \frac{1}{\cos x} = \answer{\tan x} \cdot \answer{\sec x} \]
+
+\item Lastly, rewrite the simplified integral and integrate term-by-term.
+\[
+\int \answer{\sec x \tan x} + \answer{\cos x} \, \answer{dx} = \answer{\sec x} + \answer{\sin x} + \answer{C}
+\]
+
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+\section*{Area and the Definite Integral}
+
+
+The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be found with a geometric formula, so we will begin by
+approximating the area.
+
+% Maple Code for Graph
+% display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
+
+\begin{center}
+    \begin{minipage}[c]{0.3\textwidth}
+        \centering
+        \includegraphics[height=2in,width=2in]{p3s52.eps}
+    \end{minipage}
+    \hspace{2em} % Replaces \hfill to keep the blocks tightly clustered in the center
+    \begin{minipage}[c]{0.3\textwidth}
+        \centering % Centers the text inside its own block
+        Area $\displaystyle = \textbf{?}$
+    \end{minipage}
+\end{center}
+
+
+To approximate the area bounded by a function $f(x)$ and the $x$-axis on $[a,b],$ we begin by drawing $n$ rectangles of equal width $\Delta x = \textstyle \frac{b-a}{n}$
+and lengths given by $f.$  The area is then approximated by the sum of the areas of the rectangles.
+
+The sum of the areas of the four rectangles, shown in the graph below, can be used to approximate the area bounded by $f(x)=x^2+2$ and the $x$-axis on $[0,4].$
+In the area formula shown below, the length of each rectangle is given by $f(c_i),$ where $c_i$ is the left endpoint of each subinterval.  However, $c_i$ can be any $x$-value in the $i$th subinterval.
+
+\begin{center}
+\begin{minipage}{0.5\textwidth}
+    \centering
+    \includegraphics[height=2in,width=2in]{reimannlo.eps}
+\end{minipage}%
+\hfill % Push the boxes apart to use the full line width
+\begin{minipage}{0.45\textwidth}
+    \raggedright
+    Area $\displaystyle \approx \sum_{i=1}^{n} f(c_i) \Delta x$
+\end{minipage}
+% Alt Text
+%\xmalt{The graph of $f(x)= x^2 +2 $ and four inscribed rectangles used to approximate the area bounded by $f(x)$ and the $x$-axis on the interval $[0,4].$ }\end{center}
+\end{center}
+
+
+
+%\[ \textrm{Area} \approx \sum_{i=1}^{n} f(c_i) \Delta x \]
+
+
+\begin{problem}
+Use the rectangles in the graph shown above to approximate the area bounded by $f(x) = x^2 + 2$ and the $x$-axis on $[0, 4].$
+
+
+\begin{multipleChoice}
+    \choice{\begin{align*}
+        \textrm{Area} &\approx \sum_{i=1}^{4} f(c_i) \Delta x \\[1em]
+        & = f(1) \cdot 1 + f(2) \cdot 1 + f(3) \cdot 1 + f(4) \cdot 1 \\[1em]
+        & = 3 + 6 + 11 + 18 \\[1em]
+        & = 38
+        \end{align*}
+    }
+    \choice[correct]{\begin{align*}
+        \textrm{Area} &\approx \sum_{i=1}^{4} f(c_i) \Delta x \\[1em]
+        & = f(0) \cdot 1 + f(1) \cdot 1 + f(2) \cdot 1 + f(3) \cdot 1 \\[1em]
+        & = 2 + 3 + 6 + 11 \\[1em]
+        & = 22
+        \end{align*}
+    }
+
+    \choice{None of the above.}
+\end{multipleChoice}
+
+\end{problem}
+
+\begin{problem}
+Are the rectangles in the following graph inscribed or circumscribed rectangles?
+
+\begin{center}
+    \includegraphics[height=2in,width=2in]{reimannlo.eps}
+% Alt Text
+%\xmalt{The graph of $f(x)= x^2 +2 $ and four inscribed rectangles used to approximate the area bounded by $f(x)$ and the $x$-axis on the interval $[0,4].$}
+\end{center}
+
+
+\begin{multipleChoice}
+\choice[correct]{Inscribed}
+\choice{Circumscribed}
+\end{multipleChoice}
+
+
+\begin{feedback}[correct]
+That's right!  Inscribed rectangles lie entirely within the region we are trying to find the area of, while circumscribed rectangles extend outside the region.
+Below is the graph of $f$ drawn with circumscribed rectangles.
+
+\begin{center}
+
+\includegraphics[height=2.in,width=2.in]{reimannup.eps}
+
+% \xmalt{The graph of $f(x)=x^2+2$ and four circumscribed rectangles drawn between $f$ and the $x$-axis on $[0,4].$}
+\end{center}
+
+\end{feedback}
+
+\end{problem}
+
+
+To improve our approximation, we can increase the number of rectangles from four to twelve as shown in the graphs below.
+
+
+\begin{center}
+\includegraphics[height=2.in,width=2.in]{reimannlo.eps} \hspace{0.5in}
+\includegraphics[height=2.in,width=2.in]{reimannlo2.eps}
+%\xmalt{}
+\end{center}
+
+\textbf{What happens if we use even more rectangles?}
+
+Our approximation improves as the number of rectangles increases and if we let the number of rectangles approach infinity, we get the exact area.
+
+\begin{definition}[\textbf{Area}]
+
+
+If $f$ is continuous and nonnegative on $[a,b],$ then the area of the region bounded by
+the graph of $f$ and the $x$-axis on $[a,b]$ is given by the following limit.
+
+\[ \textrm{Area} = \lim_{n \rightarrow \infty}  \sum_{i=1}^{n} f(c_i) \Delta x, \]
+
+where $c_i$ is any $x$-value in the $i$th subinterval and $\Delta x = \displaystyle \frac{b-a}{n}.$
+
+\end{definition}
+
+The sum in the above definition is called a \textbf{Riemann sum}, which is a sum used to approximate area.    The limit of the Riemann sum in the above definition is called a \textbf{definite integral} and is denoted as follows.
+
+\[   \lim_{n \rightarrow \infty} \sum_{i=1}^{n} f(c_i) \Delta x = \int_{a}^{b} f(x) \ dx     \]
+
+
+\begin{remark}
+The definite integral is not always interpreted as area.  It depends on the values of $f$ on $[a,b],$ as described below.
+
+\begin{enumerate}
+\item If $f(x)$ is \textbf{nonnegative} (positive or 0), the definite integral will give the area of the region bounded by $f$
+and the $x$-axis on $[a, b].$
+
+\item If $f$ is \textbf{negative} on $[a, b],$ the definite integral gives the negative of
+the area.
+
+\item If $f$ is \textbf{both negative and positive} on $[a, b],$ the definite integral is not interpreted
+as area.
+\end{enumerate}
+\end{remark}
+
+\section*{Definite vs. Indefinite Integrals}
+
+A \textbf{definite integral} is a number whereas an \textbf{indefinite integral} is a family of functions that differ only by a constant, $C.$
+
+
+\[ \textbf{\small Definite Integral} \hspace{0.55in} \int_a^b f(x) \ dx = \textrm{Constant} \]
+
+\[ \textbf{\small Indefinite Integral} \hspace{0.4in}  \int f(x) \ dx = F(x) + C \]
+
+
+The following theorem establishes the relationship between definite and indefinite integrals.
+
+\begin{theorem}[\textbf{Fundamental Theorem of Calculus}]
+
+~ \\[1em]
+
+If a function $f$ is continuous on $[a,b]$ and $F$ is an antiderivative of $f$ on
+$[a,b],$ then
+
+\[ \int_{a}^{b} f(x) \ dx =  F(b)-F(a). \]
+
+\end{theorem}
 
 \end{document}
