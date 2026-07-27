@@ -69,7 +69,7 @@ the function $f(x)$ is called the \textbf{integrand}.  The differential symbol $
 indicates that integration is with respect to the variable $x.$  Together, these symbols are referred to as
 an \textbf{indefinite integral}.
 
-\[ \int f(x) \ dx  \hspace{0.4in} \textbf{Indefinite Integral}}\]
+\[ \int f(x) \ dx  \hspace{0.4in} \textbf{Indefinite Integral}\]
 
 
 If $F(x)$ is an antiderivative of $f(x)$ then we can write
@@ -248,17 +248,18 @@ approximating the area.
 % Maple Code for Graph
 % display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
 
-\begin{center}
-    \begin{minipage}[c]{0.3\textwidth}
-        \centering
-        \includegraphics[height=2in,width=2in]{Area.jpg}
-    \end{minipage}
-    \hspace{2em} % Replaces \hfill to keep the blocks tightly clustered in the center
-    \begin{minipage}[c]{0.3\textwidth}
-        \centering % Centers the text inside its own block
-        Area $\displaystyle = \textbf{?}$
-    \end{minipage}
-\end{center}
+\begin{image}
+  \begin{minipage}[c]{4in} 
+    \centering 
+    \includegraphics[width=4in,height=4in]{Area.jpg} 
+    \xmalt{A graph showing the area bounded by the function x squared plus 2 and the x-axis on the interval from 0 to 4.}
+  \end{minipage}% <-- This percent sign forces the next block to stay on the same line
+  \begin{minipage}[c]{2in} 
+    \centering 
+    \large Area $\displaystyle = \textbf{?}$ 
+  \end{minipage}
+\end{image}
+
 
 
 To approximate the area bounded by a function $f(x)$ and the $x$-axis on $[a,b],$ we begin by drawing $n$ rectangles of equal width $\Delta x = \textstyle \frac{b-a}{n}$
