@@ -248,17 +248,10 @@ approximating the area.
 % Maple Code for Graph
 % display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
 
-\begin{image}
-  \begin{minipage}[c]{4in} 
-    \centering 
+\begin{center}
     \includegraphics[width=4in,height=4in]{Area.jpg} 
-  \end{minipage}% <-- This percent sign forces the next block to stay on the same line
-  \begin{minipage}[c]{2in} 
-    \centering 
-    \large Area $\displaystyle = \textbf{?}$ 
-  \end{minipage}
-  \xmalt{A graph showing the area bounded by the function x squared plus 2 and the x-axis on the interval from 0 to 4.}
-\end{image}
+    \xmalt{A graph showing the area bounded by the function x squared plus 2 and the x-axis on the interval from 0 to 4.}
+\end{center}
 
 To approximate the area bounded by a function $f(x)$ and the $x$-axis on $[a,b],$ we begin by drawing $n$ rectangles of equal width $\Delta x = \textstyle \frac{b-a}{n}$
 and lengths given by $f.$  The area is then approximated by the sum of the areas of the rectangles.
