@@ -138,6 +138,7 @@ listed since they are easily derived by rewriting them in terms of sine and cosi
 \end{enumerate}
 \end{theorem}
 
+
 \begin{procedure}[\textbf{Integration Using a u-substitution}]
 
 If $u=g(x)$ then $du=g'(x) \ dx$ and
@@ -160,6 +161,68 @@ $g(x).$
 \end{enumerate}
 
 \end{procedure}
+
+
+\section*{Integration Tips and Tricks}
+
+Often, we must first rewrite an integrand prior to applying a basic integration rule. If an integrand is not in a
+familiar form, try using one of the following techniques to create a familiar form.
+
+
+\begin{enumerate}
+\item Rewrite the integrand using rational exponents.
+
+\item Rewrite the integrand using negative exponents for quantities that appear in the denominator. 
+
+\item Expand a power.
+
+\item Separate a numerator into two or more terms.
+
+\item Use a trigonometric identity.
+
+\item Use a $u$-substitution. Try letting $u$ equal the inner most part of a composite function.
+
+\item Use polynomial division when the degree of the numerator is greater than or equal
+to the degree of the denominator.
+
+\item Complete the square.
+
+\item Look for integrands of the form $\textstyle \frac{u'}{u}$ or something close to that. Then let $u$ equal the
+denominator. These integrals yield the natural logarithmic function.
+
+\item If an integrand contains a logarithmic function of the form $f(x) = \ln g(x),$ try letting $u = \ln g(x).$ It won’t work in every case, but it often will.
+
+\item Look for integrands with denominators of the form $a^2+u^2$ and $\sqrt{a^2+ u^2}.$ These often result in an answer involving the inverse tangent function or inverse sine function.
+
+\end{enumerate}
+
+
+\begin{problem}
+Follow the steps below to evaluate the indefinite integral.
+
+\[
+\int  3x^2 - \frac{4}{x^3} + \sqrt{x}  \, dx
+\]
+
+\begin{enumerate}
+\item Rewrite the integrand.
+
+\[
+\int 3x^2 - 4x^{\answer{-3}} + x^{\answer{1/2}} \ dx
+\]
+
+\item Apply the power rule term-by-term to find the family of antiderivatives.
+\[
+\int \left( 3x^2 - \frac{4}{x^3} + \sqrt{x} \right) \, dx = x^{\answer{3}} + \frac{\answer{2}}{x^2} + 
+\frac{\answer{2} \ x^{\answer{3/2}}}{\answer{3}} + C
+\]
+
+\end{enumerate}
+\end{problem}
+
+
+
+
 
 \begin{problem}
 Follow the steps below to evaluate the indefinite integral using a $u$-substitution.
@@ -217,17 +280,17 @@ as follows.
 
 \begin{problem}
 Evaluate the definite integral using the Fundamental Theorem of Calculus.
-\[
-\int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) dx = \answer{-3/2}
-\]
+
+\[ \int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) dx = \answer{-3/2} \]
+
 \end{problem}
 
 
 \begin{problem}
 Evaluate the definite integral using the Fundamental Theorem of Calculus.
-\[
-\int_{0}^{\pi/4} \sec^2(\theta) \, d\theta = \answer{1}
-\]
+
+\[ \int_{0}^{\pi/4} \sec^2(\theta) \, d\theta = \answer{1} \]
+
 \end{problem}
 
 
@@ -294,101 +357,7 @@ $u,$ including changing the limits of integration.
 \end{multipleChoice}
 \end{problem}
 
-\section*{Integration Tips and Tricks}
 
-Often, we must first alter the form of an integrand prior to applying a basic integration rule. If an integrand is not in a
-familiar form, try using one of the following techniques to create a familiar form.
-
-
-\begin{enumerate}
-\item Expand a power.
-
-\item Separate a numerator into two or more terms.
-
-\item Use a trigonometric identity.
-
-\item Use a $u$-substitution. Try letting $u$ equal the inner most part of a composite function.
-
-\item Use polynomial division when the degree of the numerator is greater than or equal
-to the degree of the denominator.
-
-\item Complete the square.
-
-\item Look for integrands of the form $\textstyle \frac{u'}{u}$ or something close to that. Then let $u$ equal the
-denominator. These integrals yield the natural logarithmic function.
-
-\item If an integrand contains a logarithmic function of the form $f(x) = \ln g(x),$ try letting $u = \ln g(x).$ It won’t work in every case, but it often will.
-
-\item Look for integrands with denominators of the form $a^2+u^2$ and $\sqrt{a^2+ u^2}.$ These often result in an answer involving the inverse tangent function or inverse sine function.
-
-\end{enumerate}
-
-
-\begin{problem}
-Follow the steps below to evaluate the indefinite integral.
-
-\[
-\int  3x^2 - \frac{4}{x^3} + \sqrt{x}  \, dx
-\]
-
-\begin{enumerate}
-\item Rewrite the integrand.
-
-\[
-\int 3x^2 - 4x^{\answer{-3}} + x^{\answer{1/2}} \ dx
-\]
-
-\item Apply the power rule term-by-term to find the family of antiderivatives.
-\[
-\int \left( 3x^2 - \frac{4}{x^3} + \sqrt{x} \right) \, dx = x^{\answer{3}} + \frac{\answer{2}}{x^2} + 
-\frac{\answer{2} \ x^{\answer{3/2}}}{\answer{3}} + C
-\]
-
-\end{enumerate}
-\end{problem}
-
-
-\begin{problem}
-Consider the indefinite integral below.  
-
-\[
-\int \frac{x e^x + 4}{x} \, dx
-\]
-
-Split the numerator of the integrand into two separate terms, then integrate term-by-term.  
-
-
-\[ \int  \answer{e^x} + \frac{\answer{4}}{x} \, dx  = \answer{e^x} + 4\answer{\ln|x|} + C  \]
-
-
-\end{problem}
-
-
-\begin{problem}
-Follow the steps below to evaluate the indefinite integral.
-
-\[
-\int \frac{\sin x + \cos^3 x }{\cos^2 x} \, dx
-\]
-
-\begin{enumerate}
-\item First, split the numerator of the integrand into two separate terms,
-
-\[
-\int \frac{\sin x}{\cos^2 x} + \answer{\cos x}  \ dx 
-\]
-
-\item The first term can be rewritten as follows.  Simplify this term using standard trigonometric identities.
-
-\[ \frac{\sin x}{\cos x} \cdot \frac{1}{\cos x} = \answer{\tan x} \cdot \answer{\sec x} \]
-
-\item Lastly, rewrite the simplified integral and integrate term-by-term.
-\[
-\int \answer{\sec x \tan x} + \answer{\cos x} \ dx = \answer{\sec x} + \answer{\sin x} + C
-\]
-
-\end{enumerate}
-\end{problem}
 
 
 \end{document}
