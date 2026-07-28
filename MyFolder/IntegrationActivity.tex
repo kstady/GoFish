@@ -162,9 +162,32 @@ $g(x).$
 \end{procedure}
 
 
-\begin{remark}
+\begin{theorem}[\textbf{\emph{u}-Substitution for Definite Integrals}]
 
-\end{remark}
+If the function $u=g(x)$ has a continuous
+derivative on $[a,b]$ and $f$ is continuous on the range of $g,$
+then
+
+\[ \int_a^b f(g(x)) \cdot g'(x) \ dx = \int_{g(a)}^{g(b)} f(u) \ du. \]
+
+
+\textbf{Remarks:}
+
+\begin{enumerate}
+\item Notice above that the limits of integration have been
+changed after the $u$-substitution.  Usually we wait until the
+antiderivative has been found before we decide whether or not to
+change the limits of integration.
+
+\vspace{0.1in} \item It's not necessary to change the limits of
+integration, however there are some problems that are simplified
+by changing the limits of integration. If the limits of
+integration are not changed, then the antiderivative must be
+rewritten in terms of $x$ before evaluating on the interval
+$[a,b].$
+\end{enumerate}
+\end{theorem}
+
 
 \section*{Integration Tips and Tricks}
 
