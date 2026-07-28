@@ -1,0 +1,145 @@
+\documentclass{ximera}
+
+
+\title{Area and The Definite Integral}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+\begin{abstract}
+    A basic review of area and the definite integral.
+\end{abstract}
+\maketitle
+\label{xim:AreaActivity}
+
+
+\section*{Area and the Definite Integral}
+
+The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be found with a geometric formula, so we will begin by
+approximating the area.
+
+% Maple Code for Graph
+% display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
+
+\begin{center}
+    \includegraphics[width=4in,height=4in]{Area3.jpg} 
+    \xmalt{A graph showing the area bounded by the function and the x-axis on the interval from 0 to 4.  Area = ? is written inside the shaded region.}
+\end{center}
+
+%To approximate the area bounded by a function $f(x)$ and the $x$-axis on $[a,b],$ we begin by drawing $n$ rectangles of equal width $\Delta x = \textstyle \frac{b-a}{n}$
+%and lengths given by $f.$  The area is then approximated by the sum of the areas of the rectangles.
+
+The sum of the areas of the four rectangles, shown in the graph below, can be used to approximate the area bounded by $f(x)=x^2+2$ and the $x$-axis on $[0,4].$
+In the area formula shown below, the length of each rectangle is given by $f(c_i),$ where $c_i$ is the left endpoint of each subinterval.  However, $c_i$ can be any $x$-value in the $i$th subinterval.
+
+\begin{center}
+    \includegraphics[height=4in,width=4in]{LowSum4.jpg}
+    \xmalt{A graph showing four inscribed rectangles used to approximate the area bounded by f and the x-axis on the interval from 0 to 4.}
+\end{center}
+
+\[ \textrm{Area} \  \approx \sum_{i=1}^{n} f(c_i) \Delta x \] 
+
+
+\begin{problem}
+Use the rectangles in the graph shown above to approximate the area bounded by $f(x) = x^2 + 2$ and the $x$-axis on $[0, 4].$
+
+
+\begin{multipleChoice}
+    \choice{\begin{align*}
+        \textrm{Area} &\approx \sum_{i=1}^{4} f(c_i) \Delta x \\[1em]
+        & = f(1) \cdot 1 + f(2) \cdot 1 + f(3) \cdot 1 + f(4) \cdot 1 \\[1em]
+        & = 3 + 6 + 11 + 18 \\[1em]
+        & = 38
+        \end{align*}
+    }
+    \choice[correct]{\begin{align*}
+        \textrm{Area} &\approx \sum_{i=1}^{4} f(c_i) \Delta x \\[1em]
+        & = f(0) \cdot 1 + f(1) \cdot 1 + f(2) \cdot 1 + f(3) \cdot 1 \\[1em]
+        & = 2 + 3 + 6 + 11 \\[1em]
+        & = 22
+        \end{align*}
+    }
+
+    \choice{None of the above.}
+\end{multipleChoice}
+
+\end{problem}
+
+\begin{problem}
+Are the rectangles in the following graph inscribed or circumscribed rectangles?
+
+\begin{center}
+    \includegraphics[height=4in,width=4in]{LowSum4.jpg}
+% Alt Text
+\xmalt{The graph of f and four rectangles lying inside the region bounded by f and the x-axis on the interval from 0 to 4.}
+\end{center}
+
+
+\begin{multipleChoice}
+\choice[correct]{Inscribed}
+\choice{Circumscribed}
+\end{multipleChoice}
+
+
+\begin{feedback}[correct]
+That's right!  Inscribed rectangles lie entirely within the region we are trying to find the area of, while circumscribed rectangles extend outside the region.
+Below is the graph of $f$ drawn with circumscribed rectangles.
+
+\begin{center}
+
+\includegraphics[height=4in,width=4in]{UpSum4.jpg}
+
+\xmalt{The graph of f and four circumscribed rectangles drawn between f and the x-axis on the interval from 0 to 4.}
+\end{center}
+
+\end{feedback}
+
+\end{problem}
+
+
+To improve our approximation, we can increase the number of rectangles from four to twelve as shown in the graph below. 
+
+
+\begin{center}
+\includegraphics[height=4in,width=4in]{LowSum12.jpg}
+\xmalt{The graph shows twelve rectangles used to approximate the area bounded by f and the x-axis on the interval from 0 to 4.}
+\end{center}
+
+\textbf{What happens if we use even more rectangles?}
+
+Our approximation improves as the number of rectangles increases and if we let the number of rectangles approach infinity, we get the exact area.
+
+\begin{definition}[\textbf{Area}]
+
+
+If $f$ is continuous and nonnegative on $[a,b],$ then the area of the region bounded by
+the graph of $f$ and the $x$-axis on $[a,b]$ is given by the following limit.
+
+\[ \textrm{Area} = \lim_{n \rightarrow \infty}  \sum_{i=1}^{n} f(c_i) \Delta x, \]
+
+where $c_i$ is any $x$-value in the $i$th subinterval and $\Delta x = \displaystyle \frac{b-a}{n}.$
+
+\end{definition}
+
+The sum in the above definition is called a \textbf{Riemann summ}, which is a sum used as an approximation.  
+The limit of the Riemann sum in the above definition is called a \textbf{definite integral} and is denoted as follows.
+
+\[   \lim_{n \rightarrow \infty} \sum_{i=1}^{n} f(c_i) \Delta x = \int_{a}^{b} f(x) \ dx     \]
+
+
+\begin{remark}
+The definite integral is not always interpreted as area.  It depends on the values of $f$ on $[a,b],$ as described below.
+
+\begin{enumerate}
+\item If $f(x)$ is \textbf{nonnegative} (positive or 0), the definite integral will give the area of the region bounded by $f$
+and the $x$-axis on $[a, b].$
+
+\item If $f$ is \textbf{negative} on $[a, b],$ the definite integral gives the negative of
+the area.
+
+\item If $f$ is \textbf{both negative and positive} on $[a, b],$ the definite integral is not interpreted
+as area.
+\end{enumerate}
+\end{remark}
+
+\end{document}
