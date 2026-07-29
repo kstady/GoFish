@@ -13,6 +13,39 @@
 
 \section*{Area and the Definite Integral}
 
+The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be calculated using basic geometric formulas.  
+To find this area, we must begin with an approximation.
+
+\begin{image}
+    \includegraphics[width=4in,height=4in]{Area3.jpg}
+    \xmalt{A graph showing the area bounded by the function f(x) = x^2 + 2 and the x-axis on the interval from 0 to 4. Area = ? is written inside the shaded region.}
+\end{image}
+
+To approximate the area bounded by a function $f(x)$ and the $x$-axis on a closed interval $[a,b],$ we use $n$ 
+rectangles of equal width 
+
+\[ \Delta x = \frac{b-a}{n}. \]
+
+The length of each rectangle is determined by evaluating the function $f$ at a specific point within its respective subinterval.  
+The total area of the region is then approximated by summing the areas of the $n$ rectangles.
+
+For example, we can approximate the unknown area between the $x$-axis and $f(x)=x^2+1$ using the four rectangles shown below.  
+The height of each rectangle is determined by $f(c_i)$, where $c_i$ represents the left endpoint of the $i$th subinterval.  
+Note that while this example uses left endpoints, $c_i$ can be any $x$-value within the subinterval.
+
+\begin{image}
+    \includegraphics[height=4in,width=4in]{LowSum4.jpg}
+    \xmalt{A graph showing four inscribed rectangles used to approximate the area bounded by f and the x-axis on the interval from 0 to 4.}
+\end{image}
+
+\[
+\text{Area} \approx \sum_{i=1}^{n} f(c_i) \Delta x
+\]
+
+
+
+\section*{Area and the Definite Integral}
+
 The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be found with a geometric formula, so we will begin by
 approximating the area.
 
@@ -105,7 +138,7 @@ To improve our approximation, we can increase the number of rectangles from four
 
 \textbf{What happens if we use even more rectangles?}
 
-Our approximation improves as the number of rectangles increases and if we let the number of rectangles approach infinity, we get the exact area.
+Our approximation improves as the number of rectangles increases and if we let the number of rectangles approach infinity, we get the exact area!
 
 \begin{definition}[\textbf{Area}]
 
