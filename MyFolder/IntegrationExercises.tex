@@ -1,0 +1,63 @@
+\documentclass{ximera}
+
+
+\title{Integration Practice Problems}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+\begin{abstract}
+    Time to practice!
+\end{abstract}
+\maketitle
+\label{xim:IntegExercises}
+
+
+\begin{problem}
+Follow the steps below to evaluate the indefinite integral.
+
+\[
+\int \frac{\sin x + \cos^3 x }{\cos^2 x} \, dx
+\]
+
+\begin{enumerate}
+\item First, split the numerator of the integrand into two separate terms,
+
+\[
+\int \frac{\sin x}{\cos^2 x} + \answer{\cos x}  \ dx
+\]
+
+\item The first term can be rewritten as follows.  Simplify this term using standard trigonometric identities.
+
+\[ \frac{\sin x}{\cos x} \cdot \frac{1}{\cos x} = \answer{\tan x} \cdot \answer{\sec x} \]
+
+\item Lastly, rewrite the simplified integral and integrate term-by-term.
+\[
+\int \answer{\sec x \tan x} + \answer{\cos x} \ dx = \answer{\sec x} + \answer{\sin x} + C
+\]
+
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Follow the steps below to evaluate the definite integral.
+
+ \[ \int_{0}^{\pi/4} \sec^2 x \ dx \]
+
+\begin{enumerate}
+\item State the antiderivative.  
+
+    \[ F(x) = \tan x \]
+
+
+\item Find the value of the definite integral.
+
+    \[ \int_{0}^{\pi/4} \sec^2 x \ dx = \answer{1}   \]
+
+\end{enumerate}
+\end{problem}
+
+\end{document}
+
+

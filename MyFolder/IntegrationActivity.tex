@@ -34,8 +34,6 @@ $f(x)=4x^3.$
 
 \end{remark}
 
-
-
 \begin{problem}
 Is $F(x) = 3x^2+5$ an antiderivative of $f(x) = 6x?$
 
@@ -78,19 +76,6 @@ If $F(x)$ is an antiderivative of $f(x)$ then we can write
 
 where $C$ is the \textbf{constant of integration}.
 
-\begin{problem}
-Identify the integrand in the problem below.
-
-\[ \int 5x + 4 \ dx = \frac{x^5}{5} + 4x + C \]
-
-\begin{multipleChoice}
-\choice{$dx$}
-\choice[correct]{$5x+4$}
-\choice{$\frac{x^5}{5} + 4x + C$}
-\choice{$\textstyle \int$}
-\end{multipleChoice}
-
-\end{problem}
 
 \begin{problem}
 Identify the correct terminology for each part of the integration problem below.
@@ -131,8 +116,6 @@ Identify the correct terminology for each part of the integration problem below.
     }.
 \end{enumerate}
 \end{problem}
-
-
 
 
 \begin{theorem}[\textbf{Basic Integration Rules}]
@@ -263,6 +246,21 @@ Follow the steps below to evaluate the indefinite integral.
 
 
 
+\begin{problem}
+Consider the indefinite integral below.
+
+\[
+\int \frac{x e^x + 4}{x} \, dx
+\]
+
+Split the numerator of the integrand into two separate terms, then integrate term-by-term.
+
+
+\[ \int  \answer{e^x} + \frac{\answer{4}}{x} \, dx  = \answer{e^x} + 4\answer{\ln|x|} + C  \]
+
+
+\end{problem}
+
 
 
 \begin{problem}
@@ -323,13 +321,19 @@ as follows.
 \end{remark}
 
 \begin{problem}
-Evaluate the definite integral using the Fundamental Theorem of Calculus.  Begin by finding the antiderivative.
+Follow the steps below to evaluate the definite integral.  
 
-\begin{align*}
-\int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) dx &= \answer{6} x^\answer{1/2} - \frac{x^\answer{2}}{\answer{2}} \bigg |_{1}^{4} \\
-                                                      & \\
-                                                      &= \answer{-3/2} \\
-\end{align*}
+\begin{enumerate}
+\item State the antiderivative.  Do not include the constant of integration, since this is a definite integral. 
+
+    \[ F(x) = \answer{6} x^{\answer{1/2}} - \frac{x^{\answer{2}}}{\answer{2}} \]
+
+
+\item Find the value of the definite integral.
+
+    \[ \int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) \ dx = \answer{-3/2}  \] 
+
+\end{enumerate}
 \end{problem}
 
 
@@ -378,7 +382,7 @@ Follow the steps below to evaluate the definite integral using a $u$-substitutio
 \item Write the integral in terms of $u.$
 
 \begin{multipleChoice}
-    \choice{$\displaystyle \int_{1}^{2} u^3 \ dx$}
+    \choice{$\displaystyle \int_{1}^{2} 2u^3 \ du$}
     \choice{$\displaystyle \int_{2}^{1} u^3 \, du$}
     \choice[correct]{$\displaystyle \int_{1}^{2} u^3 \, du$}
     \choice{$\displaystyle \int_{2}^{1} 2u^3 \, du$}
