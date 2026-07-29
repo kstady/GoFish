@@ -6,7 +6,9 @@
 \license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
 
 \begin{document}
-
+\begin{abstract}
+Hola
+\end{abstract}
 \maketitle
 \label{xim:AreaActivity}
 
@@ -22,16 +24,23 @@ To find this area, we must begin with an approximation.
     shaded region.}
 \end{center}
 
-To approximate the area bounded by a function $f(x)$ and the $x$-axis on a closed interval $[a,b],$ we can use $n$ 
-rectangles of equal width 
+To approximate the area bounded by a function $f(x)$ and the $x$-axis on a closed interval $[a,b],$ we divide the interval into $n$ subintervals
+of equal width 
 
-\[ \Delta x = \frac{b-a}{n} \]
+\[ \Delta x = \frac{b-a}{n}. \]
 
-and length determined by evaluating the function $f$ at a specific point within each subinterval.  
+We then draw $n$ rectangles whose lengths are determined by evaluating the function $f$ at a specific point within each subinterval.
 The total area of the region is then approximated by summing the areas of the $n$ rectangles.
 
-For example, we can approximate the unknown area between the $x$-axis and $f(x)=x^2+1$ using the four rectangles shown below.  
-The height of each rectangle is determined by $f(c_i)$, where $c_i$ represents the left endpoint of the $i$th subinterval.  
+For example, we can approximate the unknown area between the $x$-axis and $f(x)=x^2+1$ on $[0,4]$ by subdividing the interval into $n = 4$
+subintervals of equal length
+
+\begin{align*} 
+    \Delta x &= \frac{4-0}{4} \\
+             &= 1. 
+\end{align*}             
+
+Next, we draw a rectangle on each subinterval so that its length is given by $f(c_i),$ where $c_i$ is the left endpoint of each subinterval.  
 Note that while this example uses left endpoints, $c_i$ can be any $x$-value within the subinterval.
 
 \begin{center}
