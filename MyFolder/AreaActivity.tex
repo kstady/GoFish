@@ -18,6 +18,10 @@ Hola
 The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be calculated using a basic geometric formula.  
 To find this area, we must begin with an approximation.
 
+% Maple Code for Graph
+% display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
+
+
 \begin{center}
     \includegraphics[width=4in,height=4in]{Area3.jpg}
     \xmalt{A graph showing the area bounded by the function f and the x-axis on the interval from 0 to 4. Area = ? is written inside the 
@@ -51,34 +55,6 @@ Note that while this example uses left endpoints, $c_i$ can be any $x$-value wit
 
 
 \[ \text{Area} \approx \sum_{i=1}^{4} f(c_i) \Delta x \]
-
-
-
-\section*{Area and the Definite Integral}
-
-The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be found with a geometric formula, so we will begin by
-approximating the area.
-
-% Maple Code for Graph
-% display([plot(x^2 + 2, x = 0 .. 4, 0 .. 18, color = grey, filled = true, thickness = 2), plot(x^2 + 2, x = 0 .. 4, color = black, thickness = 3)], labelfont = [COURIER, 1], % axesfont = ["TIMES", "NEW ROMAN", 17])
-
-\begin{center}
-    \includegraphics[width=4in,height=4in]{Area3.jpg} 
-    \xmalt{A graph showing the area bounded by the function and the x-axis on the interval from 0 to 4.  Area = ? is written inside the shaded region.}
-\end{center}
-
-%To approximate the area bounded by a function $f(x)$ and the $x$-axis on $[a,b],$ we begin by drawing $n$ rectangles of equal width $\Delta x = \textstyle \frac{b-a}{n}$
-%and lengths given by $f.$  The area is then approximated by the sum of the areas of the rectangles.
-
-The sum of the areas of the four rectangles, shown in the graph below, can be used to approximate the area.
-In the area formula shown below, the length of each rectangle is given by $f(c_i),$ where $c_i$ is the left endpoint of each subinterval.  However, $c_i$ can be any $x$-value in the $i$th subinterval.
-
-\begin{center}
-    \includegraphics[height=4in,width=4in]{LowSum4.jpg}
-    \xmalt{A graph showing four inscribed rectangles used to approximate the area bounded by f and the x-axis on the interval from 0 to 4.}
-\end{center}
-
-\[ \textrm{Area} \  \approx \sum_{i=1}^{n} f(c_i) \Delta x \] 
 
 
 \begin{problem}
