@@ -8,7 +8,8 @@
 \section*{Additional Practice Problems}
 
 Try solving the problems below for practice, without a calculator.  \textbf{Enter exact answers only}.  To enter an answer
-containing a radical, use the sqrt( ) function.  For example, type sqrt(2) for $\sqrt{2}.$  To enter an answer containing $\infty,$ type infinity or oo.
+containing a radical, use the sqrt( ) function.  For example, type sqrt(2) for $\sqrt{2}.$  To enter an answer containing 
+$\infty,$ type infinity or oo (two lowercase letter o's).
 
 \begin{problem}
 Evaluate the limit.
@@ -28,10 +29,9 @@ Does the limit exist?
 
 
 \begin{problem}
-
 Evaluate the limit.
 
-\[ \lim_{x\to -3} \frac{x+3}{x^2-9}\begin{prompt}=\answer{-1/6}\end{prompt} \]
+\[ \lim_{x\to -3} \frac{x+3}{x^2-9} =\answer{-1/6} \]
 
 
 Does the limit exist?
@@ -46,7 +46,6 @@ Does the limit exist?
 
 
 \begin{problem}
-
 Evaluate the limit.
 
 \[\lim_{x\to 10^+} \frac{3+x}{10-x}  \begin{prompt}=\answer{-\infty}\end{prompt}\]
@@ -68,7 +67,6 @@ Evaluate the limit.
 \[ \lim_{\theta\to 0} \frac{2 \sin \theta (1-\cos \theta)}{5 \theta^2} \begin{prompt}=\answer{0}\end{prompt}\]
 
 
-
 Does the limit exist?
 
 \begin{multipleChoice}
@@ -80,6 +78,22 @@ Does the limit exist?
 \textbf{Use the properties of limits to rewrite the limit as the product of limits that you can evaluate.  See the 
 Evaluating Limits Analytically section on the previous page.}
 \end{hint}
+
+
+\end{problem}
+
+\begin{problem}
+Evaluate the limit.
+
+\[ \lim_{t\to 0^+} \frac{1}{t^2} \begin{prompt}=\answer{\infty}\end{prompt}\]
+
+
+Does the limit exist?
+
+\begin{multipleChoice}
+    \choice{Yes.}
+    \choice[correct]{No.}
+  \end{multipleChoice}
 
 
 \end{problem}
@@ -104,21 +118,26 @@ Does the limit exist?
 \end{problem}
 
 
+
 \begin{problem}
-Evaluate the limit.
+During a rapid intravenous infusion, the concentration of a therapeutic drug in a patient's liver tissue during the first hour 
+is modeled by the function
 
-\[ \lim_{t\to 0^+} \frac{1}{t^2} \begin{prompt}=\answer{\infty}\end{prompt}\]
+\[ C(t) = \frac{3}{1 - t} \]
 
+where $t$ is the time in hours ($0 \leq t < 1$) and $C(t)$ is measured in milligrams per gram (mg/g).
 
-Does the limit exist?
+As time approaches $1$ hour from the left, find the limit of the drug concentration.
+
+\[ \lim_{t \to 1^-} C(t) = \answer{\infty} \]
+
+Based on this limit, what is happening to the drug concentration inside the tissue as time approaches $1$ hour?
 
 \begin{multipleChoice}
-    \choice{Yes.}
-    \choice[correct]{No.}
-  \end{multipleChoice}
-
-
+  \choice{The drug concentration drops to zero.}
+  \choice{The drug concentration stabilizes at a safe, constant level.}
+  \choice[correct]{The drug concentration spikes rapidly toward dangerously high levels.}
+\end{multipleChoice}
 \end{problem}
-
 
 \end{document}
