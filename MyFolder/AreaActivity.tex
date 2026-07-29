@@ -15,7 +15,7 @@ Hola
 
 \section*{Area and the Definite Integral}
 
-The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be calculated using basic geometric formulas.  
+The area bounded by the $x$-axis and the function $f(x)=x^2+2$ on the interval $[0,4]$ cannot be calculated using a basic geometric formula.  
 To find this area, we must begin with an approximation.
 
 \begin{center}
@@ -27,17 +27,20 @@ To find this area, we must begin with an approximation.
 To approximate the area bounded by the $x$-axis and a function $f(x)$ on a closed interval $[a,b],$ we divide the interval into $n$ subintervals
 of equal width 
 
-\[ \Delta x = \frac{b-a}{n}. \]
+\[ \Delta x = \frac{b-a}{n} \]
 
 We then draw $n$ rectangles whose lengths are determined by evaluating the function $f$ at a specific point within each subinterval.
 The total area of the region is then approximated by summing the areas of the $n$ rectangles.
+
+\[ \text{Area} \approx \sum_{i=1}^{n} f(c_i) \Delta x \]
 
 For example, we can approximate the unknown area between the $x$-axis and $f(x)=x^2+1$ on $[0,4]$ by subdividing the interval into $n = 4$
 subintervals of equal length
 
 \begin{align*} 
     \Delta x &= \frac{4-0}{4} \\
-             &= 1. 
+             &   \\
+             &= 1 
 \end{align*}             
 
 Next, we draw a rectangle on each subinterval so that its length is given by $f(c_i),$ where $c_i$ is the left endpoint of each subinterval.  
@@ -48,9 +51,8 @@ Note that while this example uses left endpoints, $c_i$ can be any $x$-value wit
     \xmalt{A graph showing four inscribed rectangles used to approximate the area bounded by f and the x-axis on the interval from 0 to 4.}
 \end{center}
 
-\[
-\text{Area} \approx \sum_{i=1}^{n} f(c_i) \Delta x
-\]
+
+\[ \text{Area} \approx \sum_{i=1}^{4} f(c_i) \Delta x \]
 
 
 
