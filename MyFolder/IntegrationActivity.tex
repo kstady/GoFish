@@ -16,7 +16,7 @@
 
 \section*{Antiderivatives}
 
-We will now reverse the process of differentiation.  That is, we will be
+We will now consider how to reverse the process of differentiation.  That is, we will be
 given a derivative and asked to find the original function. The original function is called
 the \textbf{antiderivative} and the process of finding it is called
 \textbf{antidifferentiation} or \textbf{integration}.
@@ -27,11 +27,10 @@ A function $F(x)$ is an \textbf{antiderivative} of $f(x)$ if $F'(x)=f(x).$
 \end{theorem}
 
 \begin{remark}
-Not all functions have antiderivatives, but those that do have infinitely many.  For example, $F(x)=x^2$ is
-one antiderivative of $f(x)=2x$ since $F'(x) = f(x).$  However,
-$F(x)= x^2+C,$ where $C$ is a constant, is also an antiderivative
-of $f(x)=2x,$ thus there are infinitely many antiderivatives of
-$f(x)=2x.$
+Not all functions have antiderivatives, but those that do have infinitely many.  For example, $F(x)=x^4$ is
+one antiderivative of $f(x)=4x^3$ since $F'(x) = f(x).$  However, if $C$ is a constant then $F(x)= x^4+C$ 
+is also an antiderivative of $f(x)=4x^3.$  Thus, there are infinitely many antiderivatives of
+$f(x)=4x^3.$
 
 \end{remark}
 
@@ -41,7 +40,7 @@ $f(x)=2x.$
 Is $F(x) = 3x^2+5$ an antiderivative of $f(x) = 6x?$
 
 \begin{multipleChoice}
-\choice{Yes, $F'(x) = f(x).$}
+\choice[correct]{Yes, $F'(x) = f(x).$}
 \choice{No, $F'(x) \ne f(x).$}
 \end{multipleChoice}
 
@@ -53,9 +52,9 @@ Is $F(x) = 3x^2+5$ an antiderivative of $f(x) = 6x?$
 Identify all antiderivatives of $f(x)=x^3+9.$
 
 \begin{selectAll}
-\choice[correct]{$F(x) = \frac{x^4}{4} + 9x -5$}
+\choice[correct]{$F(x) = \displaystyle \frac{x^4}{4} + 9x -5$}
 \choice{$F(x) = x^4 + 9x + 2$}
-\choice[correct]{$F(x) = \frac{x^4}{4} + 9x$}
+\choice[correct]{$F(x) = \displaystyle \frac{x^4}{4} + 9x$}
 \choice{$F(x) = x^4 + 9x + 6$}
 \end{selectAll}
 
@@ -65,8 +64,8 @@ Identify all antiderivatives of $f(x)=x^3+9.$
 \section*{Notation}
 
 The following notation is used to denote the process of integration and is read as
-``the integral of $f(x)$.''  The elongated s symbol $\textstyle \int$ is called the \textbf{integral sign} and
-the function $f(x)$ is called the \textbf{integrand}.  The differential symbol $dx$
+``the integral of $f(x)$.''  The elongated s symbol: $\textstyle \int$ is called the \textbf{integral sign} and
+the function $f(x)$ is called the \textbf{integrand}.  The \textbf{differential} symbol $dx$
 indicates that integration is with respect to the variable $x.$  Together, these symbols are referred to as
 an \textbf{indefinite integral}.
 
@@ -92,6 +91,47 @@ Identify the integrand in the problem below.
 \end{multipleChoice}
 
 \end{problem}
+
+
+Consider the following integration problem.
+
+\[ \int 5x + 4 \ dx = \frac{5x^2}{2} + 4x + C  \]
+
+Identify the correct terminology for each part of the problem below.
+
+\begin{enumerate}
+    \item The function $5x + 4$ is the 
+    \begin{wordChoice}
+        \choice{differential.}
+        \choice[correct]{integrand.}
+        \choice{antiderivative.}
+        \choice{constant of integration.}
+    \end{wordChoice}
+    
+    \item The symbol $dx$ is the
+    \begin{wordChoice}
+        \choice[correct]{differential.}
+        \choice{antiderivative.}
+        \choice{constant of integration.}
+        \choice{indefinite integral.}
+    \end{wordChoice}
+
+    \item The term $+ C$ on the right side is the
+    \begin{wordChoice}
+        \choice{integrand.}
+        \choice{differential.}
+        \choice[correct]{constant of integration.}
+        \choice{variable of integration.}
+    \end{wordChoice}
+
+    \item The expression $\frac{5x^2}{2} + 4x$ (excluding $C$) is a specific
+    \begin{wordChoice}
+        \choice{derivative.}
+        \choice{differential.}
+        \choice{integrand.}
+        \choice[correct]{antiderivative.}
+    \end{wordChoice}
+\end{enumerate}
 
 
 \begin{theorem}[\textbf{Basic Integration Rules}]
@@ -279,17 +319,24 @@ as follows.
 \end{remark}
 
 \begin{problem}
-Evaluate the definite integral using the Fundamental Theorem of Calculus.
+Evaluate the definite integral using the Fundamental Theorem of Calculus.  Begin by finding the antiderivative.  
 
-\[ \int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) dx = \answer{-3/2} \]
-
+\begin{align*}
+\int_{1}^{4} \left( \frac{3}{\sqrt{x}} - x \right) dx &= \answer{6} x^\answer{1/2} - \frac{x^\answer{2}}{\answer{2}} \bigg |_{1}^{4} \\
+                                                      & \\
+                                                      &= \answer{-3/2} \\
+\end{align*}
 \end{problem}
 
 
 \begin{problem}
-Evaluate the definite integral using the Fundamental Theorem of Calculus.
+Evaluate the definite integral using the Fundamental Theorem of Calculus.  Begin by finding the antiderivative.
 
-\[ \int_{0}^{\pi/4} \sec^2(\theta) \, d\theta = \answer{1} \]
+\begin{align*}
+\int_{0}^{\pi/4} \sec^2(\theta) \ d\theta &= \tan \theta \bigg |_{0}^{\pi/4} \\
+                                          & \\
+                                          &= \answer{1} \\
+\end{align*}
 
 \end{problem}
 
@@ -306,13 +353,13 @@ then
 
 \begin{enumerate}
 \item Notice above that the limits of integration have been
-changed \emph{after} the $u$-substitution.  Usually we wait until the
+changed right after the $u$-substitution.  Usually we wait until the
 antiderivative has been found before we decide whether or not to
 change the limits of integration.
 
 \item It's not necessary to change the limits of
-integration, however there are some problems that are simplified
-by changing the limits of integration. If the limits of
+integration, however there are some Calculus II problems that are much easier to complete if the
+limits of integration are changed.  If the limits of
 integration are not changed, then the antiderivative must be
 rewritten in terms of $x$ before evaluating on the interval
 $[a,b].$
@@ -329,35 +376,28 @@ Follow the steps below to evaluate the definite integral using a $u$-substitutio
 \item Identify the correct substitution.
 
 \begin{multipleChoice}
-\choice{$u = 2x$}
-\choice[correct]{$u = x^2 + 1$}
-\choice{$u = (x^2 + 1)^3$}
-\choice{$u = x^2$}
+    \choice{$u = 2x$}
+    \choice[correct]{$u = x^2 + 1$}
+    \choice{$u = (x^2 + 1)^3$}
+    \choice{$u = x^2$}
 \end{multipleChoice}
 
-\item Find the definite integral.
-\[
-\int_{0}^{1} 2x(x^2 + 1)^3 \, dx = \answer{\frac{15}{4}}
-\]
-\end{enumerate}
-\end{problem}
 
-\begin{problem}
-Consider the definite integral from the previous problem.  Using the substitution, rewrite the integral completely in terms of 
-$u,$ including changing the limits of integration. 
-
-
-\[ \int_{0}^{1} 2x(x^2 + 1)^3 \, dx \]
+\item Write the integral in terms of $u.$
 
 \begin{multipleChoice}
-\choice{$\displaystyle \int_{1}^{2} u^3 \ dx$}
-\choice{$\displaystyle \int_{2}^{1} u^3 \, du$}
-\choice[correct]{$\displaystyle \int_{1}^{2} u^3 \, du$}
-\choice{$\displaystyle \int_{2}^{1} 2u^3 \, du$}
+    \choice{$\displaystyle \int_{1}^{2} u^3 \ dx$}
+    \choice{$\displaystyle \int_{2}^{1} u^3 \, du$}
+    \choice[correct]{$\displaystyle \int_{1}^{2} u^3 \, du$}
+    \choice{$\displaystyle \int_{2}^{1} 2u^3 \, du$}
 \end{multipleChoice}
+
+\item Find the value of the definite integral.
+
+\[ \int_{0}^{1} 2x(x^2 + 1)^3 \ dx = \answer{\frac{15}{4}} \]
+
+\end{enumerate}
 \end{problem}
-
-
 
 
 \end{document}
