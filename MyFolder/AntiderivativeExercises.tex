@@ -27,8 +27,8 @@ Identify an errors in their work.
 \begin{multipleChoice}
     \choice{They forgot to write the limits of integration on the integral sign.}
     \choice[correct]{They omitted the differential $dx$ on the left-hand side.}
-    \choice{The antiderivative should be $\frac{6x^6}{5}$.}
-    \choice{The constant of integration $+C$ is not allowed for indefinite integrals.}
+    \choice{The antiderivative should be $\displaystyle \frac{6x^6}{5}$.}
+    \choice{The constant of integration $+C$ is not needed for indefinite integrals.}
     \choice{Their work is correct.}
 \end{multipleChoice}
 \end{problem}
@@ -192,6 +192,7 @@ v(t) = 30t^2 + 4t
 
 where $v(t)$ is measured in meters per second.
 
+
 \begin{enumerate}
 \item Find the position function $s(t).$
 
@@ -210,6 +211,68 @@ C = \answer{0}
 \[
 s(2) = \answer{88} \text{ meters}
 \]
+
+\end{enumerate}
+\end{problem}
+
+\definecolor{accessibleOrange}{HTML}{B34700} % Dark Burnt Orange
+
+
+\begin{problem}
+The function $f(x) = \frac{1}{2}x^2 + 1$ is graphed below on the interval $[0, 4].$
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=middle,
+    xlabel={$x$},
+    ylabel={$y$},
+    xlabel style={at={(current axis.right of origin)}, anchor=west},
+    ylabel style={at={(current axis.above origin)}, anchor=south},
+    xmin=-0.5, xmax=4.5,
+    ymin=-0.5, ymax=10,
+    xtick={0,2,4}, ytick={0,1,3,9},
+    grid=none
+]
+% Draw rectangles for Left Riemann Sum
+\draw[fill=blue!10, draw=blue!50, thick] (axis cs:0,0) rectangle (axis cs:2,1);
+\draw[fill=blue!10, draw=blue!50, thick] (axis cs:2,0) rectangle (axis cs:4,3);
+
+% Plot function
+\addplot[domain=0:4, samples=100, ultra thick, red] {0.5*x^2 + 1};
+\node at (axis cs:1.8, 7.5) {$f(x) = \frac{1}{2}x^2 + 1$};
+\end{axis}
+\end{tikzpicture}
+
+\xmalt{A graph showing a Riemann sum approximation for finding the area bounded by the x-axis, the function f on the interval from
+x equals 0 to 4.  Two shaded blue rectangles represent the approximation: the first spans from x equals 0 to 2 with a height of 1, 
+and the second spans from x equals 2 to 4 with a height of 3.}
+\end{center}
+
+\begin{enumerate}
+\item Identify the correct sum below that can be used to approximate the area of the region. 
+
+\begin{multipleChoice}
+\choice{\begin{align*}
+\textrm{Area} &\approx \sum_{i=1}^{2} f(c_i) \Delta x \\[1em]
+& = f(2) \cdot 2 + f(4) \cdot 2 \\[
+\end{align*}
+}
+\choice{\begin{align*}
+\textrm{Area} &\approx \sum_{i=1}^{4} f(c_i) \Delta x \\[1em]
+& = f(0) \cdot 1 + f(1) \cdot 1 + f(2) \cdot 1 + f(3) \cdot 1 \\[1em]
+\end{align*}
+}
+\choice[correct]{\begin{align*}
+\textrm{Area} &\approx \sum_{i=1}^{2} f(c_i) \Delta x \\[1em]
+& = f(0) \cdot 2 + f(2) \cdot 2 \\[1em]
+\end{align*}
+}
+\end{multipleChoice}
+
+\item Use the sum to approximate the area.
+
+\textcolor{accessibleOrange}{\textbf{Area}} $\approx \answer{8}$
 
 \end{enumerate}
 \end{problem}
@@ -251,12 +314,13 @@ Consider the region bounded by the curve $y = \sqrt{x},$ the $x$-axis and the ve
     \item Setup the definite integral that gives the area of the region. 
     
     \[
-    \int_{\answer{0}}^{\answer{4}} \answer{\sqrt{x}} \ dx
+    \int_{\answer{0}}^{\answer{2}} \answer{\sqrt{x}} \ dx
     \]
 
     \item Find the area.
     
-    Area = $\frac{ \answer{16} }{ \answer{3} }$
+
+\textcolor{accessibleOrange}{\textbf{Area}} = $\answer{8} $
 
 \end{enumerate}
 \end{problem}
