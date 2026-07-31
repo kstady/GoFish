@@ -235,11 +235,11 @@ The function $f(x) = \frac{1}{2}x^2 + 1$ is graphed below on the interval $[0, 4
     grid=none
 ]
 % Draw rectangles for Left Riemann Sum
-\draw[fill=blue!10, draw=blue!50, thick] (axis cs:0,0) rectangle (axis cs:2,1);
-\draw[fill=blue!10, draw=blue!50, thick] (axis cs:2,0) rectangle (axis cs:4,3);
+\draw[fill=gray!15, draw=blue!50, thick] (axis cs:0,0) rectangle (axis cs:2,1);
+\draw[fill=gray!15, draw=blue!50, thick] (axis cs:2,0) rectangle (axis cs:4,3);
 
 % Plot function
-\addplot[domain=0:4, samples=100, ultra thick, red] {0.5*x^2 + 1};
+\addplot[domain=0:4, samples=100, ultra thick, accessibleGlaucous] {0.5*x^2 + 1};
 \node at (axis cs:1.8, 7.5) {$f(x) = \frac{1}{2}x^2 + 1$};
 \end{axis}
 \end{tikzpicture}
@@ -251,8 +251,7 @@ and the second spans from x equals 2 to 4 with a height of 3.}
 
 \begin{enumerate}
 \item Using the rectangles in the graph above, identify the correct sum that can be used to approximate the area of the 
-region bounded by the $x$-axis and the function
-on $[0,4].$ 
+region bounded by the $x$-axis and the function on $[0,4].$ 
 
 \begin{multipleChoice}
 \choice{\begin{align*}
