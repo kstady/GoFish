@@ -121,7 +121,7 @@ then $du = \answer{7} \ dx.$
 
 \item Identify the correct integral rewritten in terms of $u.$
 \begin{multipleChoice}
-\choice{$\displaystyle \int 7 \cdot \frac{1}{1 + u^2} \ du$}
+\choice{$\displaystyle 7 \int \frac{1}{1 + u^2} \ du$}
 \choice{$\displaystyle \int \frac{1}{1 + u^2} \ du$}
 \choice{$\displaystyle \frac{1}{7} \int \frac{1}{1 + 7u^2} \ du$}
 \choice[correct]{$\displaystyle \frac{1}{7} \int  \cdot \frac{1}{1 + u^2} \ du$}
@@ -235,8 +235,8 @@ The function $f(x) = \frac{1}{2}x^2 + 1$ is graphed below on the interval $[0, 4
     grid=none
 ]
 % Draw rectangles for Left Riemann Sum
-\draw[fill=gray!15, draw=blue!50, thick] (axis cs:0,0) rectangle (axis cs:2,1);
-\draw[fill=gray!15, draw=blue!50, thick] (axis cs:2,0) rectangle (axis cs:4,3);
+\draw[fill=gray!15, draw=accessibleGlaucous, thick] (axis cs:0,0) rectangle (axis cs:2,1);
+\draw[fill=gray!15, draw=accessibleGlaucous, thick] (axis cs:2,0) rectangle (axis cs:4,3);
 
 % Plot function
 \addplot[domain=0:4, samples=100, ultra thick, accessibleGlaucous] {0.5*x^2 + 1};
